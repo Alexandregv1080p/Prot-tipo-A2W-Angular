@@ -1,0 +1,19 @@
+.header{
+    display: flex;
+    align-items: center;
+    background-color: #0E333D;
+    height: 90px;
+}
+#logo{
+    width: 127px;
+    height: 63px;
+    margin-left: 50px;
+}
+.title-group{
+    display: flex;
+    align-items: center;
+    color: aliceblue;
+}
+i{
+    padding-left: 10px;
+}
