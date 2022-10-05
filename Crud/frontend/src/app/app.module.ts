@@ -18,6 +18,10 @@ import { MatSortModule } from '@angular/material/sort';
 import { ClienteComponent } from './views/cliente/cliente.component';
 import { PerfilComponent } from './views/perfil/perfil.component';
 import { ModulosComponent } from './views/modulos/modulos.component';
+import { CadastrarClienteComponent } from './components/cadastrar-cliente/cadastrar-cliente.component';
+import { MatButtonModule } from '@angular/material/button';
+
+
 
 @NgModule({
   declarations: [
@@ -28,7 +32,8 @@ import { ModulosComponent } from './views/modulos/modulos.component';
     TabelaComponent,
     ClienteComponent,
     PerfilComponent,
-    ModulosComponent
+    ModulosComponent,
+    CadastrarClienteComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +44,8 @@ import { ModulosComponent } from './views/modulos/modulos.component';
     MatSidenavModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
