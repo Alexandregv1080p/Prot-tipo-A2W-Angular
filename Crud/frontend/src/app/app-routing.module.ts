@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './views/home/home.component';
 import { ClienteComponent } from './views/cliente/cliente.component';
 import { PerfilComponent } from './views/perfil/perfil.component';
-import { CadastrarClienteComponent } from './components/cadastrar-cliente/cadastrar-cliente.component';
+import { CadastrarClienteComponent } from './components/createCliente/cadastrar-cliente/cadastrar-cliente.component';
 
 const routes: Routes = [{
   path:"",
@@ -15,7 +15,7 @@ const routes: Routes = [{
   path:"perfil",
   component: PerfilComponent
 },{
-  path:"cadastrar-cliete",
+  path:"createCliente/cadastrar-cliente",
   component:CadastrarClienteComponent
 }
 ];

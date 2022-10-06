@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cliente',
@@ -7,11 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClienteComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
   }
-  navigateToCreate(){
-    
+  navigateToClientCreate(){
+    this.router.navigate(['createCliente/cadastrar-cliente'])
   }
 }

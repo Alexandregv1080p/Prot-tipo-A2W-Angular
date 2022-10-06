@@ -18,7 +18,7 @@ import { MatSortModule } from '@angular/material/sort';
 import { ClienteComponent } from './views/cliente/cliente.component';
 import { PerfilComponent } from './views/perfil/perfil.component';
 import { ModulosComponent } from './views/modulos/modulos.component';
-import { CadastrarClienteComponent } from './components/cadastrar-cliente/cadastrar-cliente.component';
+import { CadastrarClienteComponent } from './components/createCliente/cadastrar-cliente/cadastrar-cliente.component';
 import { MatButtonModule } from '@angular/material/button';
 
 
