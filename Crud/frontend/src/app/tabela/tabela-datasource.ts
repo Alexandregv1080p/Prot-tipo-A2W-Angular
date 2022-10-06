@@ -8,30 +8,31 @@ import { Observable, of as observableOf, merge } from 'rxjs';
 export interface TabelaItem {
   name: string;
   id: number;
+  status: boolean;
 }
 
 // TODO: replace this with real data from your application
 const EXAMPLE_DATA: TabelaItem[] = [
-  {id: 1, name: 'Hydrogen'},
-  {id: 2, name: 'Helium'},
-  {id: 3, name: 'Lithium'},
-  {id: 4, name: 'Beryllium'},
-  {id: 5, name: 'Boron'},
-  {id: 6, name: 'Carbon'},
-  {id: 7, name: 'Nitrogen'},
-  {id: 8, name: 'Oxygen'},
-  {id: 9, name: 'Fluorine'},
-  {id: 10, name: 'Neon'},
-  {id: 11, name: 'Sodium'},
-  {id: 12, name: 'Magnesium'},
-  {id: 13, name: 'Aluminum'},
-  {id: 14, name: 'Silicon'},
-  {id: 15, name: 'Phosphorus'},
-  {id: 16, name: 'Sulfur'},
-  {id: 17, name: 'Chlorine'},
-  {id: 18, name: 'Argon'},
-  {id: 19, name: 'Potassium'},
-  {id: 20, name: 'Calcium'},
+  {id: 1, name: 'Hydrogen', status:true},
+  {id: 2, name: 'Helium', status:true},
+  {id: 3, name: 'Lithium', status:true},
+  {id: 4, name: 'Beryllium', status:true},
+  {id: 5, name: 'Boron', status:true},
+  {id: 6, name: 'Carbon', status:true},
+  {id: 7, name: 'Nitrogen', status:true},
+  {id: 8, name: 'Oxygen', status:true},
+  {id: 9, name: 'Fluorine', status:true},
+  {id: 10, name: 'Neon', status:true},
+  {id: 11, name: 'Sodium', status:true},
+  {id: 12, name: 'Magnesium', status:true},
+  {id: 13, name: 'Aluminum', status:true},
+  {id: 14, name: 'Silicon', status:true},
+  {id: 15, name: 'Phosphorus', status:true},
+  {id: 16, name: 'Sulfur', status:true},
+  {id: 17, name: 'Chlorine', status:true},
+  {id: 18, name: 'Argon', status:true},
+  {id: 19, name: 'Potassium', status:true},
+  {id: 20, name: 'Calcium', status:true},
 ];
 
 /**
