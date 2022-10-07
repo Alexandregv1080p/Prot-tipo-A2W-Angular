@@ -16,6 +16,7 @@ export class CadastrarClienteComponent implements OnInit {
   }
   cadastrarCliente():void{
     this.cadastroCliente.showMensage('Cliente cadastrado com sucesso')
+    this.router.navigate(["cliente"])
   }
   
 }

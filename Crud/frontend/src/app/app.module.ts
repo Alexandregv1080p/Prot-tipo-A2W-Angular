@@ -25,6 +25,8 @@ import {MatInputModule} from '@angular/material/input';
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatCardModule } from '@angular/material/card';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { CreateModuloComponent } from './components/create-modulo/cadastrar-modulo/create-modulo.component';
+
 
 @NgModule({
   declarations: [
@@ -37,6 +39,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     PerfilComponent,
     ModulosComponent,
     CadastrarClienteComponent,
+    CreateModuloComponent,
+    
     
   ],
   imports: [

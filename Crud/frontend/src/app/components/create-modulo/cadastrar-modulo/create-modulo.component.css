@@ -1,0 +1,29 @@
+.salvar{
+    margin-right: 10px;
+    background-color: green;
+}
+.cancelar:hover{
+    background-color: red;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+button{
+    margin-top: 10px;
+}
+.buttons{
+    display: flex;
+    justify-content: flex-end;
+}
+input[type="checkbox"].toggle{
+    opacity: 0;
+    position: absolute;
+}
+input[type="checkbox"].toggle:checked + label::before{
+    content: "";
+}
+input[type="checkbox"].toggle:checked + label{
+    color:red
+}
