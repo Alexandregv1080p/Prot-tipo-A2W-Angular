@@ -1,5 +1,6 @@
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import { ClienteLogService } from '../cliente-log.service';
 
 @Component({
   selector: 'app-cadastrar-cliente',
@@ -8,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastrarClienteComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private cadastroCliente: ClienteLogService) { }
 
   ngOnInit(): void {
+    
+  }
+  cadastrarCliente():void{
+    this.cadastroCliente.showMensage('Cliente cadastrado com sucesso')
   }
   
 }
