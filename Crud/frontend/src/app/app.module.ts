@@ -20,8 +20,10 @@ import { PerfilComponent } from './views/perfil/perfil.component';
 import { ModulosComponent } from './views/modulos/modulos.component';
 import { CadastrarClienteComponent } from './components/createCliente/cadastrar-cliente/cadastrar-cliente.component';
 import { MatButtonModule } from '@angular/material/button';
-
-
+import { FormsModule } from '@angular/forms';
+import {MatInputModule} from '@angular/material/input';
+import { MatFormFieldModule } from "@angular/material/form-field";
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,8 @@ import { MatButtonModule } from '@angular/material/button';
     ClienteComponent,
     PerfilComponent,
     ModulosComponent,
-    CadastrarClienteComponent
+    CadastrarClienteComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -45,7 +48,11 @@ import { MatButtonModule } from '@angular/material/button';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
-    MatButtonModule
+    MatButtonModule,
+    MatInputModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
