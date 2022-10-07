@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
+  isMenuOpened:boolean = false;
+  isMenuOpened2:boolean = false;
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  toggleMenu():void {
+    this.isMenuOpened = !this.isMenuOpened
+  }
+  toggleMenu2():void {
+    this.isMenuOpened2 = !this.isMenuOpened2
+  }
 }

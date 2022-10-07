@@ -24,8 +24,7 @@
     display: inline-block;
 }
 .dropdown-content {
-    display: none;
-    background-color: #f9f9f9;
+    background-color: #0c0a0a;
     min-width: 142px;
     box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
     z-index: 1;
@@ -33,7 +32,7 @@
     margin-left: 4px;
 }
 .dropdown-content a {
-    color: black;
+    color: rgb(245, 240, 240);
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -44,6 +43,5 @@
 }
 
 .dropdown:hover .dropdown-content {
-    display: inline-block;
-    position: absolute;
+    display: block;
 }

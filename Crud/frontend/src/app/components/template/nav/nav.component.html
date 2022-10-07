@@ -1,6 +1,6 @@
 <mat-sidenav-container>
     <mat-sidenav class="sidenav" mode="side" opened fixedInViewport="true" fixedTopGap="90">
-        <mat-nav-list>
+        <mat-nav-list class="menu-container">
             <a mat-list-item routerLink="">
                 <i class="material-icons" >
                     home
@@ -8,13 +8,13 @@
                 Início
             </a>
             <div class="dropdown">
-                <a mat-list-item class="dropmenu">
+                <a mat-list-item class="dropmenu" (click)="toggleMenu()">
                     <i class="material-icons">
                         sort
                     </i>
                     Cadastros
                 </a>
-                <div class="dropdown-content">
+                <div class="dropdown-content" *ngIf="isMenuOpened">
                     <a routerLink="cliente">Clientes</a>
                     <a>Módulos</a>
                     <a>Módulo Cliente</a>
@@ -22,15 +22,20 @@
             </div>
             
             <div class="dropdown">
-                <a mat-list-item class="dropmenu">
+                <a mat-list-item class="dropmenu" (click)="toggleMenu2()" >
                     <i class="material-icons">
                         person
                     </i>
                     Perfil
                 </a>
-                <div class="dropdown-content">
+                <div class="dropdown-content" *ngIf="isMenuOpened2">
                     <a routerLink="perfil">Editar dados</a>
-                    <a>Sair</a>
+                    <a>
+                        <i class="material-icons v-middle">
+                            exit_to_app
+                        </i>
+                        Sair
+                    </a>
                 </div>
             </div>
         </mat-nav-list>
