@@ -1,7 +1,7 @@
 {
-    "products":{
+    "clientes":{
         "id":1,
         "name":"Caneta",
-        "price": 5.89
+        "status": true
     }
 }

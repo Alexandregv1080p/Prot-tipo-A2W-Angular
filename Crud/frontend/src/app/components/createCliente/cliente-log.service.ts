@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import {MatSnackBar} from '@angular/material/snack-bar'
 
@@ -7,7 +8,11 @@ import {MatSnackBar} from '@angular/material/snack-bar'
 })
 export class ClienteLogService {
 
-  constructor(private snackBar:MatSnackBar) { }
+  constructor(
+    private snackBar:MatSnackBar,
+    private http:HttpClientModule
+    ) { }
+
   showMensage(msg: string):void{
     this.snackBar.open(msg,'Fechar',{
       duration:3000,
@@ -15,4 +20,5 @@ export class ClienteLogService {
       verticalPosition:"top"
     })
   }
+  create(cliente: Cliente)
 }
