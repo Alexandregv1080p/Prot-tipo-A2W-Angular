@@ -1,6 +1,8 @@
-import { HttpClientModule } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { HttpClient} from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import {MatSnackBar} from '@angular/material/snack-bar'
+import { Cliente } from './cliente.model';
 
 
 @Injectable({
@@ -8,9 +10,11 @@ import {MatSnackBar} from '@angular/material/snack-bar'
 })
 export class ClienteLogService {
 
+  baseUrl = "http://localhost:3001/clientes"
+
   constructor(
     private snackBar:MatSnackBar,
-    private http:HttpClientModule
+    private http:HttpClient
     ) { }
 
   showMensage(msg: string):void{
@@ -20,5 +24,7 @@ export class ClienteLogService {
       verticalPosition:"top"
     })
   }
-  create(cliente: Cliente)
+  create(cliente:Cliente):Observable<Cliente>{
+    return this.http.post<Cliente>(this.baseUrl,cliente)
+  }
 }

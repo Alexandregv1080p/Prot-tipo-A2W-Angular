@@ -7,6 +7,7 @@ import { CadastrarClienteComponent } from './components/createCliente/cadastrar-
 import { ModulosComponent } from './views/modulos/modulos.component';
 import { CreateModuloComponent } from './components/create-modulo/cadastrar-modulo/create-modulo.component';
 
+
 const routes: Routes = [{
   path:"",
   component: HomeComponent
