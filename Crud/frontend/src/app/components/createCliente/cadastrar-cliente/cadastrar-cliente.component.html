@@ -9,8 +9,8 @@
             <input matInput placeholder="Descrição" [(ngModel)]="cliente.description" name="description">
         </mat-form-field>
         <div class="form-check form-switch">
-            <input class="form-check-input" [(ngModel)]="cliente.status" type="checkbox" name="status" id="flexSwitchCheckDefault">
-            <label class="form-check-label" for="flexSwitchCheckDefault">Status</label>
+            <input class="toggle" [(ngModel)]="cliente.status" type="checkbox" name="status" id="check">
+            <label class="label" for="check"></label>
         </div>
         
     </form>

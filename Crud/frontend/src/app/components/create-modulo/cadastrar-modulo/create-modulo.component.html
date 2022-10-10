@@ -1,24 +1,24 @@
 <mat-card>
-    <mat-card-title>Cadastrar Módulo</mat-card-title>
+    <mat-card-title>Cadastrar Cliente</mat-card-title>
     <form class="form">
         <mat-form-field appearance="outline">
-            <input matInput placeholder="Nome">
+            <input matInput placeholder="Nome" [(ngModel)]="modulo.name" name="name">
             <mat-hint>*Entre com seu nome completo</mat-hint>
         </mat-form-field>
-        <mat-form-field appearance="outline">
-            <input matInput placeholder="Descrição">
-            <mat-hint>*Entre com seu nome completo</mat-hint>
+        <mat-form-field appearance="outline" >
+            <input matInput placeholder="Descrição" [(ngModel)]="modulo.description" name="description">
         </mat-form-field>
+        <div class="form-check form-switch">
+            <input class="toggle" [(ngModel)]="modulo.status" type="checkbox" name="status" id="check">
+            <label class="label" for="check"></label>
+        </div>
         
     </form>
 </mat-card>
-<div class="buttons ">
-    <button mat-raised-button class="salvar" (click)="cadastrarModulo()" >
-        Salvar
-    </button>
-    <button mat-raised-button class="cancelar" routerLink="/cliente">
-        Cancelar
-    </button>
-</div>
-<input type="checkbox" class="toggle" id="check">
-<label for="check">Status</label>
+<button mat-raised-button class="salvar" (click)="cadastrarModulo()" >
+    Salvar
+</button>
+<button mat-raised-button class="cancelar" (click)="cancel()">
+    Cancelar
+</button>
+
