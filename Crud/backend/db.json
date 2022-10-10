@@ -1,7 +1,28 @@
 {
-    "clientes":{
-        "id":1,
-        "name":"Caneta",
-        "status": true
+  "clientes": [
+    {
+      "name": "Roberto",
+      "status": true,
+      "description": "Cadastrado em tal dia",
+      "id": 1
+    },
+    {
+      "name": "Cliente Teste2",
+      "status": true,
+      "description": "Cadastrado",
+      "id": 2
+    },
+    {
+      "name": "Cliente Teste2",
+      "status": true,
+      "description": "Cadastrado",
+      "id": 3
+    },
+    {
+      "name": "Cliente Teste2",
+      "status": true,
+      "description": "Cadastrado",
+      "id": 4
     }
+  ]
 }
