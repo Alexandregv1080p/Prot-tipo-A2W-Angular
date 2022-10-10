@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { ClienteLogService } from '../cliente-log.service';
 
+
 @Component({
   selector: 'app-cadastrar-cliente',
   templateUrl: './cadastrar-cliente.component.html',
@@ -11,9 +12,9 @@ import { ClienteLogService } from '../cliente-log.service';
 export class CadastrarClienteComponent implements OnInit {
 
   cliente:Cliente = {
-    name:'Cliente Teste2',
-    status:true,
-    description:'Cadastrado'
+    name:'',
+    status: false,
+    description:''
   }
 
   constructor(private router: Router, private cadastroCliente: ClienteLogService) { }

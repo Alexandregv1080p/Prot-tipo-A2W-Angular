@@ -27,7 +27,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { CreateModuloComponent } from './components/create-modulo/cadastrar-modulo/create-modulo.component';
 import {HttpClientModule} from '@angular/common/http'
-import { MatFormField } from '@angular/material/form-field';
+
 
 
 @NgModule({
@@ -61,8 +61,7 @@ import { MatFormField } from '@angular/material/form-field';
     MatFormFieldModule,
     MatCardModule,
     MatSnackBarModule,
-    HttpClientModule,
-    MatFormField
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
