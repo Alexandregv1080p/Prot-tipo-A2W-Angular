@@ -5,14 +5,15 @@ import { map } from 'rxjs/operators';
 import { Observable, of as observableOf, merge } from 'rxjs';
 
 // TODO: Replace this with your own data model type
-export interface TabelaItem {
+export interface Cliente {
   name: string;
   id: number;
   status: boolean;
+  description?:string;
 }
 
 // TODO: replace this with real data from your application
-const EXAMPLE_DATA: TabelaItem[] = [
+const EXAMPLE_DATA: Cliente[] = [
   {id: 1, name: 'Hydrogen', status:true},
   {id: 2, name: 'Helium', status:true},
   {id: 3, name: 'Lithium', status:true},
@@ -32,16 +33,16 @@ const EXAMPLE_DATA: TabelaItem[] = [
   {id: 17, name: 'Chlorine', status:true},
   {id: 18, name: 'Argon', status:true},
   {id: 19, name: 'Potassium', status:true},
-  {id: 20, name: 'Calcium', status:true},
+  {id: 20, name: 'Calcium', status:true}
 ];
 
 /**
- * Data source for the Tabela view. This class should
+ * Data source for the CadastrClienteTabela view. This class should
  * encapsulate all logic for fetching and manipulating the displayed data
  * (including sorting, pagination, and filtering).
  */
-export class TabelaDataSource extends DataSource<TabelaItem> {
-  data: TabelaItem[] = EXAMPLE_DATA;
+export class CadastrClienteTabelaDataSource extends DataSource<Cliente> {
+  data: Cliente[] = EXAMPLE_DATA;
   paginator: MatPaginator | undefined;
   sort: MatSort | undefined;
 
@@ -54,7 +55,7 @@ export class TabelaDataSource extends DataSource<TabelaItem> {
    * the returned stream emits new items.
    * @returns A stream of the items to be rendered.
    */
-  connect(): Observable<TabelaItem[]> {
+  connect(): Observable<Cliente[]> {
     if (this.paginator && this.sort) {
       // Combine everything that affects the rendered data into one update
       // stream for the data-table to consume.
@@ -77,7 +78,7 @@ export class TabelaDataSource extends DataSource<TabelaItem> {
    * Paginate the data (client-side). If you're using server-side pagination,
    * this would be replaced by requesting the appropriate data from the server.
    */
-  private getPagedData(data: TabelaItem[]): TabelaItem[] {
+  private getPagedData(data: Cliente[]): Cliente[] {
     if (this.paginator) {
       const startIndex = this.paginator.pageIndex * this.paginator.pageSize;
       return data.splice(startIndex, this.paginator.pageSize);
@@ -90,7 +91,7 @@ export class TabelaDataSource extends DataSource<TabelaItem> {
    * Sort the data (client-side). If you're using server-side sorting,
    * this would be replaced by requesting the appropriate data from the server.
    */
-  private getSortedData(data: TabelaItem[]): TabelaItem[] {
+  private getSortedData(data: Cliente[]): Cliente[] {
     if (!this.sort || !this.sort.active || this.sort.direction === '') {
       return data;
     }

@@ -11,7 +11,6 @@ import { NavComponent } from './components/template/nav/nav.component'
 import { MatSidenavModule} from '@angular/material/sidenav';
 import { MatListModule} from '@angular/material/list';
 import { HomeComponent } from './views/home/home.component';
-import { TabelaComponent } from './tabela/tabela.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
@@ -29,7 +28,8 @@ import { CreateModuloComponent } from './components/create-modulo/cadastrar-modu
 import {HttpClientModule} from '@angular/common/http';
 import { ReadModuloComponent } from './components/create-modulo/read-modulo/read-modulo.component';
 import { ForDirective } from './directives/for.directive';
-import { ReadClienteComponent } from './components/createCliente/read-cliente/read-cliente.component'
+import { ReadClienteComponent } from './components/createCliente/read-cliente/read-cliente.component';
+import { CadastrClienteTabelaComponent } from './components/createCliente/cadastr-cliente-tabela/cadastr-cliente-tabela.component'
 
 
 
@@ -39,7 +39,6 @@ import { ReadClienteComponent } from './components/createCliente/read-cliente/re
     HeaderComponent,
     NavComponent,
     HomeComponent,
-    TabelaComponent,
     ClienteComponent,
     PerfilComponent,
     ModulosComponent,
@@ -48,6 +47,7 @@ import { ReadClienteComponent } from './components/createCliente/read-cliente/re
     ReadModuloComponent,
     ForDirective,
     ReadClienteComponent,
+    CadastrClienteTabelaComponent,
     
     
   ],
