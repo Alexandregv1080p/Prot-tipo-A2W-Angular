@@ -27,5 +27,7 @@ export class ClienteLogService {
   create(cliente:Cliente):Observable<Cliente>{
     return this.http.post<Cliente>(this.baseUrl,cliente)
   }
-  
+  read(): Observable<Cliente[]> {
+    return this.http.get<Cliente[]>(this.baseUrl)
+  }
 }

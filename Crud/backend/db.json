@@ -30,19 +30,6 @@
       "description": "",
       "id": 5
     }
-  ],
-  "modulo": [
-    {
-      "name": "Teste",
-      "status": true,
-      "description": "Teste2",
-      "id": 1
-    },
-    {
-      "name": "Teste e talz",
-      "status": false,
-      "description": "testando",
-      "id": 2
-    }
   ]
+  
 }

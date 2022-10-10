@@ -28,7 +28,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { CreateModuloComponent } from './components/create-modulo/cadastrar-modulo/create-modulo.component';
 import {HttpClientModule} from '@angular/common/http';
 import { ReadModuloComponent } from './components/create-modulo/read-modulo/read-modulo.component';
-import { ForDirective } from './directives/for.directive'
+import { ForDirective } from './directives/for.directive';
+import { ReadClienteComponent } from './components/createCliente/read-cliente/read-cliente.component'
 
 
 
@@ -46,6 +47,7 @@ import { ForDirective } from './directives/for.directive'
     CreateModuloComponent,
     ReadModuloComponent,
     ForDirective,
+    ReadClienteComponent,
     
     
   ],
