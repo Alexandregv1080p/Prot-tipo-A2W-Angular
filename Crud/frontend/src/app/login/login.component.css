@@ -1,0 +1,25 @@
+.salvar{
+    margin-right: 10px;
+    background-color: green;
+}
+.cancelar:hover{
+    background-color: red;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.form-check{
+    width: 20%;
+}
+button{
+    margin-top: 20px;
+}
+.mat-card {
+    width: 19%;
+}
+.content{
+    background-color: white;
+    display: flex;
+}

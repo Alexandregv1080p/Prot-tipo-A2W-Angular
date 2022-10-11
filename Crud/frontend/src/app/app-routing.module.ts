@@ -6,7 +6,7 @@ import { PerfilComponent } from './views/perfil/perfil.component';
 import { CadastrarClienteComponent } from './components/createCliente/cadastrar-cliente/cadastrar-cliente.component';
 import { ModulosComponent } from './views/modulos/modulos.component';
 import { CreateModuloComponent } from './components/create-modulo/cadastrar-modulo/create-modulo.component';
-
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [{
   path:"",
@@ -26,6 +26,9 @@ const routes: Routes = [{
 },{
   path:"create-modulo/cadastrar-modulo",
   component: CreateModuloComponent
+},{
+  path:"login",
+  component: LoginComponent
 }
 ];
 

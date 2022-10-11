@@ -30,7 +30,8 @@ import { ReadModuloComponent } from './components/create-modulo/read-modulo/read
 import { ForDirective } from './directives/for.directive';
 import { ReadClienteComponent } from './components/createCliente/read-cliente/read-cliente.component';
 import { CadastrClienteTabelaComponent } from './components/createCliente/cadastr-cliente-tabela/cadastr-cliente-tabela.component';
-import { TabelaCadastroModuloComponent } from './components/create-modulo/tabela-cadastro-modulo/tabela-cadastro-modulo.component'
+import { TabelaCadastroModuloComponent } from './components/create-modulo/tabela-cadastro-modulo/tabela-cadastro-modulo.component';
+import { LoginComponent } from './login/login.component'
 
 
 
@@ -50,6 +51,7 @@ import { TabelaCadastroModuloComponent } from './components/create-modulo/tabela
     ReadClienteComponent,
     CadastrClienteTabelaComponent,
     TabelaCadastroModuloComponent,
+    LoginComponent,
     
     
   ],

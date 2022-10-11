@@ -62,6 +62,3 @@ input[type="checkbox"].toggle:checked + label::after{
     left: 4.70em;
     transition: 200ms ease-in-out;
 }
-input[type="checkbox"].toggle:focus + label::before{
-    outline:1px solid black
-}

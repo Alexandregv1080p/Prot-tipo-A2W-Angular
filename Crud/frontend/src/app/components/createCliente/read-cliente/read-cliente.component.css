@@ -20,3 +20,8 @@ th{
     background-color: #5fcf7f;
     color: white;
 }
+.mat-table{    
+    border-radius: 8px;
+    overflow:hidden ;
+}
+
