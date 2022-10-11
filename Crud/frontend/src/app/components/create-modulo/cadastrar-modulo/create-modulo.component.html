@@ -1,5 +1,5 @@
 <mat-card>
-    <mat-card-title>Cadastrar Cliente</mat-card-title>
+    <mat-card-title>Cadastrar Módulo</mat-card-title>
     <form class="form">
         <mat-form-field appearance="outline">
             <input matInput placeholder="Nome" [(ngModel)]="modulo.name" name="name">
@@ -10,7 +10,7 @@
         </mat-form-field>
         <div class="form-check form-switch">
             <input class="toggle" [(ngModel)]="modulo.status" type="checkbox" name="status" id="check">
-            <label class="label" for="check"></label>
+            <label class="label" for="check">Status do Módulo</label>
         </div>
         
     </form>

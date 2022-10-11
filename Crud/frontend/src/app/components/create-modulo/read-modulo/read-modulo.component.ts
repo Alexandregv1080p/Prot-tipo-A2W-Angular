@@ -11,6 +11,8 @@ export class ReadModuloComponent implements OnInit {
 
   modulos: Modulo[] 
 
+  displayedColumns = ['id','name','status']
+
   constructor(private moduloService : ModuloLogService) { }
 
   ngOnInit(): void {

@@ -29,7 +29,50 @@
       "status": true,
       "description": "",
       "id": 5
+    },
+    {
+      "name": "",
+      "status": false,
+      "description": "",
+      "id": 6
+    },
+    {
+      "name": "",
+      "status": false,
+      "description": "",
+      "id": 7
+    },
+    {
+      "name": "",
+      "status": false,
+      "description": "",
+      "id": 8
+    }
+  ],
+  "modulos": [
+    {
+      "name": "Roberto",
+      "status": true,
+      "description": "Cadastrado em tal dia",
+      "id": 1
+    },
+    {
+      "name": "",
+      "status": false,
+      "description": "",
+      "id": 2
+    },
+    {
+      "name": "",
+      "status": false,
+      "description": "",
+      "id": 3
+    },
+    {
+      "name": "teste",
+      "status": true,
+      "description": "teste",
+      "id": 4
     }
   ]
-  
 }

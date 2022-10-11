@@ -11,7 +11,7 @@ import { Modulo } from './module.model';
 export class ModuloLogService {
 
 
-  baseUrl = "http://localhost:3001/modulo"  
+  baseUrl = "http://localhost:3001/modulos"  
 
   constructor(
     private snackBar:MatSnackBar,

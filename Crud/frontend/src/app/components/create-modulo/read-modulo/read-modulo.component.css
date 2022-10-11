@@ -1,0 +1,40 @@
+table {
+    width: 100%;
+  }
+.mat-elevation-z8 {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+th.mat-header-cell {
+    text-align: center;
+}
+.mat-header-cell {
+    font-size: 1.6em;
+}
+th{
+    background-color: #5fcf7f;
+    color: white;
+}
+th.mat-header-cell:first-of-type, td.mat-cell:first-of-type, td.mat-footer-cell:first-of-type {
+    padding-left: 45px;
+}
+.mat-table{    
+    border-radius: 8px;
+    overflow:hidden ;
+}
+.mat-table
+    {
+      background-color:transparent!important;  
+      border: solid 1px grey;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border-radius: 5em;
+    }
+    table tr:last-child td /*To remove the last border*/
+    {
+      border-bottom:0 solid
+    }

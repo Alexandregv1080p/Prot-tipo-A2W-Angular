@@ -29,7 +29,8 @@ import {HttpClientModule} from '@angular/common/http';
 import { ReadModuloComponent } from './components/create-modulo/read-modulo/read-modulo.component';
 import { ForDirective } from './directives/for.directive';
 import { ReadClienteComponent } from './components/createCliente/read-cliente/read-cliente.component';
-import { CadastrClienteTabelaComponent } from './components/createCliente/cadastr-cliente-tabela/cadastr-cliente-tabela.component'
+import { CadastrClienteTabelaComponent } from './components/createCliente/cadastr-cliente-tabela/cadastr-cliente-tabela.component';
+import { TabelaCadastroModuloComponent } from './components/create-modulo/tabela-cadastro-modulo/tabela-cadastro-modulo.component'
 
 
 
@@ -48,6 +49,7 @@ import { CadastrClienteTabelaComponent } from './components/createCliente/cadast
     ForDirective,
     ReadClienteComponent,
     CadastrClienteTabelaComponent,
+    TabelaCadastroModuloComponent,
     
     
   ],
