@@ -6,7 +6,12 @@
             <mat-hint>*Entre com seu nome completo</mat-hint>
         </mat-form-field>
         <mat-form-field appearance="outline" >
-            <input matInput placeholder="Descrição" name="description">
+            <input matInput placeholder="Senha" name="description">
         </mat-form-field>
+        <button mat-raised-button class="cadastro">
+            Cadastrar Cliente
+        </button>
     </form>
+    
+    <p style="text-align: center;margin-top: 15px;" (click)="irParaCadastro()">Não possui cadastro? <a ><strong>acesse para cadastrar</strong></a></p>
 </mat-card>

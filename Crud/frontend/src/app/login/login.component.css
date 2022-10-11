@@ -13,13 +13,8 @@
 .form-check{
     width: 20%;
 }
-button{
-    margin-top: 20px;
-}
 .mat-card {
     width: 19%;
+    margin: auto;
 }
-.content{
-    background-color: white;
-    display: flex;
-}
+

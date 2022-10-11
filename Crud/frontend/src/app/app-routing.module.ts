@@ -7,6 +7,7 @@ import { CadastrarClienteComponent } from './components/createCliente/cadastrar-
 import { ModulosComponent } from './views/modulos/modulos.component';
 import { CreateModuloComponent } from './components/create-modulo/cadastrar-modulo/create-modulo.component';
 import { LoginComponent } from './login/login.component';
+import { CadastroUsuarioComponent } from './login/cadastro-usuario/cadastro-usuario.component';
 
 const routes: Routes = [{
   path:"",
@@ -29,6 +30,9 @@ const routes: Routes = [{
 },{
   path:"login",
   component: LoginComponent
+},{
+  path:"cadastro-usuario",
+  component: CadastroUsuarioComponent
 }
 ];
 
