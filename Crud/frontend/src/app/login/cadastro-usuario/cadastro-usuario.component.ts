@@ -2,6 +2,7 @@ import { Router } from '@angular/router';
 import { Usuario } from './../users.module';
 import { LogServService } from './../log-serv.service';
 import { Component, OnInit } from '@angular/core';
+import { FormGroup,FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-cadastro-usuario',
@@ -16,10 +17,12 @@ export class CadastroUsuarioComponent implements OnInit {
     email:''
   }
 
-  constructor(private logServ: LogServService, private router: Router) { }
+  public formLogin !: FormGroup
+  constructor(private logServ: LogServService, private router: Router,private formBuilder : FormBuilder) { }
 
 
   ngOnInit(): void {
+    
   }
 
   cadastrarCliente():void{

@@ -33,8 +33,7 @@ import { CadastrClienteTabelaComponent } from './components/createCliente/cadast
 import { TabelaCadastroModuloComponent } from './components/create-modulo/tabela-cadastro-modulo/tabela-cadastro-modulo.component';
 import { LoginComponent } from './login/login.component';
 import { CadastroUsuarioComponent } from './login/cadastro-usuario/cadastro-usuario.component'
-
-
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -73,7 +72,9 @@ import { CadastroUsuarioComponent } from './login/cadastro-usuario/cadastro-usua
     MatFormFieldModule,
     MatCardModule,
     MatSnackBarModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

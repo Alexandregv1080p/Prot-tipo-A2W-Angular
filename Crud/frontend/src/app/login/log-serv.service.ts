@@ -10,7 +10,8 @@ import { Injectable } from '@angular/core';
 export class LogServService {
 
   constructor(private snackBar: MatSnackBar,private http: HttpClient) { }
-  
+
+
   baseUrl = "http://localhost:3001/usuarios"
 
   showMensage(msg: string):void{
