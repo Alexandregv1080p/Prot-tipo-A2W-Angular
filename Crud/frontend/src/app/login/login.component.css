@@ -17,4 +17,10 @@
     width: 19%;
     margin: auto;
 }
-
+.mat-card {
+    width: 19%;
+    margin: auto;
+}
+.mat-card-title{
+    justify-content: center;
+}

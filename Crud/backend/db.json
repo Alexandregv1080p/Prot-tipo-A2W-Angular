@@ -74,5 +74,19 @@
       "description": "teste",
       "id": 4
     }
+  ],
+  "usuarios": [
+    {
+      "name": "teste",
+      "senha": "teste",
+      "email": "teste",
+      "id": 1
+    },
+    {
+      "name": "teste",
+      "senha": "teste",
+      "email": "",
+      "id": 2
+    }
   ]
 }
