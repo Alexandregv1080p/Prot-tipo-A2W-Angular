@@ -9,8 +9,11 @@
             <input matInput placeholder="Descrição" [(ngModel)]="cliente.description" name="description">
         </mat-form-field>
         <div class="form-check form-switch">
-            <input class="toggle" [(ngModel)]="cliente.status" type="checkbox" name="status" id="check">
+            <input class="toggle" #email="ngModel" [(ngModel)]="cliente.status" type="checkbox" name="status" id="check">
             <label class="label" for="check"></label>
+            <div *ngIf="email.invalid">
+                Login inválido
+            </div>
         </div>
         
     </form>
