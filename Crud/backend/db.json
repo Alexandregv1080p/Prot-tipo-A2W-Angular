@@ -67,25 +67,13 @@
       "status": false,
       "description": "",
       "id": 3
-    },
-    {
-      "name": "teste",
-      "status": true,
-      "description": "teste",
-      "id": 4
     }
   ],
-  "usuarios": [
+  "usuarios-logados": [
     {
-      "name": "teste",
-      "senha": "teste",
-      "email": "teste",
+      "userName": "",
+      "passWord": "",
       "id": 1
-    },
-    {
-      "userName": "teste",
-      "passWord": "teste",
-      "id": 2
     }
   ]
 }

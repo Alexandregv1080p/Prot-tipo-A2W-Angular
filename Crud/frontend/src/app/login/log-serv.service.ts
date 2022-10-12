@@ -1,3 +1,5 @@
+import { RequestLogin } from './requestLogin/requestLogin';
+import { FormGroup } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Usuario } from './users.module';
@@ -11,6 +13,7 @@ export class LogServService {
 
   constructor(private snackBar: MatSnackBar,private http: HttpClient) { }
 
+  loginForm: FormGroup
 
   baseUrl = "http://localhost:3001/usuarios"
 
@@ -27,9 +30,7 @@ export class LogServService {
   login(urser:Usuario):Observable<any>{
     return this.http.post(this.baseUrl,urser)
   }
-  read(urser:Usuario):Observable<Usuario[]>{
-    return this.http.get<Usuario[]>(this.baseUrl)
-  }
+  
   
 
 }

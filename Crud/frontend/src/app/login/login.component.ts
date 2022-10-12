@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { LogServService } from './log-serv.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -16,7 +17,8 @@ export class LoginComponent implements OnInit {
 
   constructor(private router: Router,
     private formBuild: FormBuilder,
-    private authService: LogServService) { }
+    private authService: LogServService,
+    private http: HttpClient) { }
 
   ngOnInit(): void {
     this.initForm();
@@ -31,18 +33,12 @@ export class LoginComponent implements OnInit {
   irParaCadastro(){
     this.router.navigate(["cadastro-usuario"])
   }
-  loginProces(){
-    if(this.loginForm.valid){
-      this.authService.login(this.loginForm.value).subscribe(res=>{
-        if(res.sucess){
-            console.log(res)
-            alert(res.message)
-        }
-        else{
-          alert()
-        }
-      })
-    }
+  loginProces():void{
+    this.http.post(this.baseUrl,this.loginForm.getRawValue())
+    .subscribe(res =>
+      console.log(res))
+      this.router.navigate(["cadastro-usuario"])
+    this.authService.showMensage('Usuario logado!')
   }
   
 }
