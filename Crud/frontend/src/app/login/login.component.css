@@ -24,3 +24,6 @@
 .mat-card-title{
     justify-content: center;
 }
+.mat-hint{
+    color: red  ;
+}

@@ -6,17 +6,20 @@
             <mat-hint>*Entre com seu nome completo</mat-hint>
         </mat-form-field>
         <mat-form-field appearance="outline" >
-            <input matInput placeholder="Senha" [(ngModel)]="users.senha" name="senha">
+            <input matInput placeholder="Senha" #senha="ngModel" [(ngModel)]="users.senha" name="senha">
             <mat-hint>*Crie uma senha de até 8 digitos</mat-hint>
         </mat-form-field>
         <mat-form-field appearance="outline" >
             <input matInput placeholder="Confirme a senha" name="senha">
         </mat-form-field>
         <mat-form-field appearance="outline"  >
-            <input matInput placeholder="Email" [(ngModel)]="users.email" name="email">
+            <input matInput placeholder="Email" #email="ngModel" [(ngModel)]="users.email" name="email">
+            <div *ngIf="email.invalid">
+                Login inválido
+            </div>
             <mat-hint>*Entre com um email para contato</mat-hint>
         </mat-form-field>
-        <button mat-raised-button class="cadastro" (click)="cadastrarCliente()">
+        <button mat-raised-button class="cadastro" [disabled]="email.invalid" (click)="cadastrarCliente()">
             Cadastrar
         </button>
         <button mat-raised-button class="cadastro" (click)="cancel()">

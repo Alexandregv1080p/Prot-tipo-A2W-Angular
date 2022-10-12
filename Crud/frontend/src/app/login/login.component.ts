@@ -1,4 +1,4 @@
-import { FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
@@ -9,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private formBuilder:FormBuilder,private router: Router) { }
+  loginForm: FormGroup
+
+  constructor(private router: Router,
+    private formBuild: FormBuilder) { }
 
   ngOnInit(): void {
+    this.loginForm = this.formBuild.group({
+        userName:['',Validators.required],
+        passWord:['',Validators.required]
+    })
   }
   irParaCadastro(){
     this.router.navigate(["cadastro-usuario"])

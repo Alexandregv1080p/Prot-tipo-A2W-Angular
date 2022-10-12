@@ -11,9 +11,7 @@
         <div class="form-check form-switch">
             <input class="toggle" #email="ngModel" [(ngModel)]="cliente.status" type="checkbox" name="status" id="check">
             <label class="label" for="check"></label>
-            <div *ngIf="email.invalid">
-                Login inválido
-            </div>
+            
         </div>
         
     </form>
