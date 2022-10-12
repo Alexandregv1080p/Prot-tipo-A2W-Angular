@@ -1,6 +1,6 @@
 <mat-card>
     <mat-card-title style="display:flex">Olá! Faça login para continuar</mat-card-title>
-    <form [formGroup]="loginForm" class="form">
+    <form [formGroup]="loginForm" class="form" (ngSubmit)="loginProces()">
         <mat-form-field appearance="outline">
             <input matInput placeholder="Nome" autofocus formControlName="userName" >
             <mat-hint *ngIf="loginForm.get('userName').errors?.['required']">*Entre com seu nome completo</mat-hint>
@@ -9,10 +9,10 @@
             <input matInput placeholder="Senha" formControlName="passWord">
             <mat-hint *ngIf="loginForm.get('passWord').errors?.['required']">*Ensira a senha porfavor</mat-hint>
         </mat-form-field>
-        <button mat-raised-button [disabled]="!loginForm.valid" (click)="onSubmit()" class="cadastro">
+        <button mat-raised-button [disabled]="!loginForm.valid" class="cadastro">
             Login
         </button>
     </form>
     
-    <p style="text-align: center;margin-top: 15px;" >Não possui cadastro? <a ><strong>acesse para cadastrar</strong></a></p>
+    <p style="text-align: center;margin-top: 15px;" >Não possui cadastro? <a (click)="irParaCadastro()"><strong>acesse para cadastrar</strong></a></p>
 </mat-card>

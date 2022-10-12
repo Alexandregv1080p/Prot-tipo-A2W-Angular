@@ -1,19 +1,19 @@
 <mat-card>
     <mat-card-title style="display:flex; text-align: center;">Ensira os dados logo abaixo</mat-card-title>
-    <form [formGroup]="formRegister" class="form">
+    <form class="form">
         <mat-form-field appearance="outline">
-            <input matInput placeholder="Nome" formControlName="userName">
+            <input matInput placeholder="Nome" [(ngModel)]="users.name" name="name">
             <mat-hint>*Entre com seu nome completo</mat-hint>
         </mat-form-field>
         <mat-form-field appearance="outline" >
-            <input matInput placeholder="Senha" formControlName="passWord">
+            <input matInput placeholder="Senha" [(ngModel)]="users.senha" name="senha">
             <mat-hint>*Crie uma senha de até 8 digitos</mat-hint>
         </mat-form-field>
         <mat-form-field appearance="outline" >
             <input matInput placeholder="Confirme a senha" name="senha">
         </mat-form-field>
         <mat-form-field appearance="outline"  >
-            <input matInput placeholder="Email" formControlName="email">
+            <input matInput placeholder="Email" [(ngModel)]="users.email" name="email">
             <mat-hint>*Entre com um email para contato</mat-hint>
         </mat-form-field>
         <button mat-raised-button class="cadastro" (click)="cadastrarCliente()">
@@ -22,7 +22,5 @@
         <button mat-raised-button class="cadastro" (click)="cancel()">
             Login
         </button>
-    </form>
-    
-    <p style="text-align: center;margin-top: 15px;">Não possui cadastro? <a ><strong>acesse para cadastrar</strong></a></p>
+    </form> 
 </mat-card>
