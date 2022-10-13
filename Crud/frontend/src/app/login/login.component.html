@@ -9,7 +9,7 @@
             <input matInput placeholder="Senha" formControlName="senha">
             <mat-hint *ngIf="loginForm.get('senha').errors?.['required']">*Ensira a senha porfavor</mat-hint>
         </mat-form-field>
-        <button mat-raised-button [disabled]="!loginForm.valid" (click)="loginProces()" class="cadastro">
+        <button mat-raised-button [disabled]="!loginForm.valid" (click)="loginProces(loginForm.value )" class="cadastro">
             Login
         </button>
     </form>

@@ -18,6 +18,8 @@ export class LoginComponent implements OnInit {
 
   usuarios : Usuario[]
 
+  ususarioAutenticado : boolean
+
   constructor(private router: Router,
     private formBuild: FormBuilder,
     private authService: LogServService) { }
@@ -26,22 +28,35 @@ export class LoginComponent implements OnInit {
     this.initForm();
   }
   initForm(){
-    this.loginForm = this.formBuild.group({
-      name:['',Validators.required],
-      senha:['',Validators.required]
-  })
-  }
-
-  irParaCadastro(){
-    this.router.navigate(["cadastro-usuario"])
-  }
-  loginProces():void{
-    this.authService.showMensage('Usuario logado!')
     this.authService.getUser().subscribe((usuarios)=>{
       this.usuarios = usuarios
       console.log(usuarios)
     }) 
+    this.loginForm = this.formBuild.group({
+      name:['',Validators.required],
+      senha:['',Validators.required]
+  })
+    this.ususarioAutenticado = false
   }
+  irParaCadastro(){
+    this.router.navigate(["cadastro-usuario"])
+  }
+  loginProces(usuarios: any):void{
+    if(usuarios.name){
+      this.usuarios.forEach((item:any)=>{
+        if(item.name === usuarios.name && item.senha === usuarios.senha){
+          this.authService.showMensage('Usuario logado!')
+          this.ususarioAutenticado = true
+          this.router.navigate([""])
+        }
+        else{
+          this.authService.showMensage('Usuario inválido')
+        }
+      })
+    }
+    
+  }
+  
   
 }
 

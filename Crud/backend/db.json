@@ -5,48 +5,6 @@
       "status": true,
       "description": "Cadastrado em tal dia",
       "id": 1
-    },
-    {
-      "name": "Alves",
-      "status": true,
-      "description": "",
-      "id": 2
-    },
-    {
-      "name": "Ana",
-      "status": false,
-      "description": "",
-      "id": 3
-    },
-    {
-      "name": "João",
-      "status": false,
-      "description": "",
-      "id": 4
-    },
-    {
-      "name": "",
-      "status": true,
-      "description": "",
-      "id": 5
-    },
-    {
-      "name": "",
-      "status": false,
-      "description": "",
-      "id": 6
-    },
-    {
-      "name": "",
-      "status": false,
-      "description": "",
-      "id": 7
-    },
-    {
-      "name": "",
-      "status": false,
-      "description": "",
-      "id": 8
     }
   ],
   "modulos": [
@@ -55,38 +13,26 @@
       "status": true,
       "description": "Cadastrado em tal dia",
       "id": 1
-    },
-    {
-      "name": "",
-      "status": false,
-      "description": "",
-      "id": 2
-    },
-    {
-      "name": "",
-      "status": false,
-      "description": "",
-      "id": 3
     }
   ],
   "usuarios": [
     {
-      "name":"Roberto",
-      "senha":"123",
-      "email":"roberto@gmail.com",
+      "name": "Alvaro",
+      "senha": "123456",
+      "email": "Alvaro@gmail.com",
       "id": 1
     },
     {
-      "name":"Roberto",
-      "senha":"123",
-      "email":"roberto@gmail.com"
-    }
-  ],
-  "usuarios-logados": [
+      "name": "",
+      "senha": "",
+      "email": "",
+      "id": 2
+    },
     {
-      "userName": "",
-      "passWord": "",
-      "id": 1
+      "name": "Alexandre",
+      "senha": "1234",
+      "email": "alexandregv@gmail.com",
+      "id": 3
     }
   ]
 }
