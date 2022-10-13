@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -12,7 +12,7 @@ export class NavComponent implements OnInit {
 
   isMenuOpened:boolean = false;
   isMenuOpened2:boolean = false;
-  constructor(private http: HttpClient) { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
     
@@ -22,6 +22,10 @@ export class NavComponent implements OnInit {
   }
   toggleMenu2():void {
     this.isMenuOpened2 = !this.isMenuOpened2
+  }
+  logout(){
+    localStorage.clear();   
+    this.router.navigate(["login"])
   }
   
 }

@@ -8,31 +8,38 @@ import { ModulosComponent } from './views/modulos/modulos.component';
 import { CreateModuloComponent } from './components/create-modulo/cadastrar-modulo/create-modulo.component';
 import { LoginComponent } from './login/login.component';
 import { CadastroUsuarioComponent } from './login/cadastro-usuario/cadastro-usuario.component';
+import { AuthGuard } from './login/auth.guard';
 
 const routes: Routes = [{
   path:"",
-  component: HomeComponent
+  component: HomeComponent,
+  canActivate: [AuthGuard]
 },{
   path:"cliente",
-  component: ClienteComponent
+  component: ClienteComponent,
+  canActivate: [AuthGuard]
 },{
   path:"perfil",
-  component: PerfilComponent
+  component: PerfilComponent,
+  canActivate: [AuthGuard]
 },{
   path:"createCliente/cadastrar-cliente",
-  component:CadastrarClienteComponent
+  component:CadastrarClienteComponent,
+  canActivate: [AuthGuard]
 },{
   path:"modulos",
-  component:ModulosComponent
+  component:ModulosComponent,
+  canActivate: [AuthGuard]
 },{
   path:"create-modulo/cadastrar-modulo",
-  component: CreateModuloComponent
+  component: CreateModuloComponent,
+  canActivate: [AuthGuard]
 },{
   path:"login",
   component: LoginComponent
 },{
   path:"cadastro-usuario",
-  component: CadastroUsuarioComponent
+  component: CadastroUsuarioComponent 
 }
 ];
 

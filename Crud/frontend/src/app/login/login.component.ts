@@ -46,11 +46,12 @@ export class LoginComponent implements OnInit {
       this.usuarios.forEach((item:any)=>{
         if(item.name === usuarios.name && item.senha === usuarios.senha){
           this.authService.showMensage('Usuario logado!')
-          this.ususarioAutenticado = true
+          localStorage.setItem("Está logado", "true")
           this.router.navigate([""])
         }
         else{
           this.authService.showMensage('Usuario inválido')
+          localStorage.clear();   
         }
       })
     }
