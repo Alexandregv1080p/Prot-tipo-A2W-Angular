@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,11 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
+  autenticado = false
+
   isMenuOpened:boolean = false;
   isMenuOpened2:boolean = false;
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
+    
   }
   toggleMenu():void {
     this.isMenuOpened = !this.isMenuOpened
@@ -19,4 +23,5 @@ export class NavComponent implements OnInit {
   toggleMenu2():void {
     this.isMenuOpened2 = !this.isMenuOpened2
   }
+  
 }

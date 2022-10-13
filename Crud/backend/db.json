@@ -69,6 +69,19 @@
       "id": 3
     }
   ],
+  "usuarios": [
+    {
+      "name":"Roberto",
+      "senha":"123",
+      "email":"roberto@gmail.com",
+      "id": 1
+    },
+    {
+      "name":"Roberto",
+      "senha":"123",
+      "email":"roberto@gmail.com"
+    }
+  ],
   "usuarios-logados": [
     {
       "userName": "",
