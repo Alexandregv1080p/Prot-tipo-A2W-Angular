@@ -22,11 +22,7 @@ export class CadastroUsuarioComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.formRegister = this.formBuild.group({
-      userName:['',Validators.required],
-      passWord:['',Validators.required],
-      email:['',Validators.required]
-  })
+    
   }
 
   cadastrarCliente():void{

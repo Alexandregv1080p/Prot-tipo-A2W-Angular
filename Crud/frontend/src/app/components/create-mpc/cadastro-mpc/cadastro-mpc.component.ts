@@ -1,3 +1,4 @@
+import { Mpc } from './../mpc.model';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,7 +10,16 @@ export class CadastroMpcComponent implements OnInit {
 
   constructor() { }
 
+  mpc : Mpc = {
+    nomeCliente: "José",
+    nomeModulo: 'Módulo 1',
+    quantidade: 2,
+    data:'20-10-2022',
+    status: true,
+    id: 1
+  }
   ngOnInit(): void {
+
   }
 
 }

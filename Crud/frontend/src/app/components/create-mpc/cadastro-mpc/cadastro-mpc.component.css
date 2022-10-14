@@ -6,16 +6,21 @@
     background-color: red;
 }
 .input-group{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    width: 100%;  
 }
-.content-1{
-    display: flex;
+.mat-form-field {
+    margin-right: 1rem;
+} 
+.mat-form-field[_ngcontent-udl-c83] {
+    width: 50%;
+}
+.inputs{
+    width: 49%;
 }
 .form-check{
     width: 20%;
 }
-
 button{
     margin-top: 20px;
 }

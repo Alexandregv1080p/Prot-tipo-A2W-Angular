@@ -36,6 +36,8 @@ import { CadastroUsuarioComponent } from './login/cadastro-usuario/cadastro-usua
 import { ReactiveFormsModule } from '@angular/forms';
 import { ModuloPorClienteComponent } from './views/modulo-por-cliente/modulo-por-cliente.component';
 import { CadastroMpcComponent } from './components/create-mpc/cadastro-mpc/cadastro-mpc.component';
+import { TabelaCadastroMpcComponent } from './components/create-mpc/tabela-cadastro-mpc/tabela-cadastro-mpc.component';
+import { McpComponent } from './views/home/mcp/mcp.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +59,8 @@ import { CadastroMpcComponent } from './components/create-mpc/cadastro-mpc/cadas
     CadastroUsuarioComponent,
     ModuloPorClienteComponent,
     CadastroMpcComponent,
+    TabelaCadastroMpcComponent,
+    McpComponent,
     
     
   ],
