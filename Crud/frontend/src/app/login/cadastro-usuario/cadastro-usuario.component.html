@@ -1,0 +1,26 @@
+<mat-card>
+    <mat-card-title style="display:flex; text-align: center;">Ensira os dados logo abaixo</mat-card-title>
+    <form class="form" #loginForm="ngForm">
+        <mat-form-field appearance="outline">
+            <input matInput placeholder="Nome" required [(ngModel)]="users.name" name="name" #name="ngModel">
+            <mat-hint *ngIf="name.errors?.['required']">*Entre com seu nome completo</mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline" >
+            <input matInput placeholder="Senha" required [(ngModel)]="users.senha" name="senha" #senha="ngModel">
+            <mat-hint *ngIf="senha.errors?.['required']">*Crie uma senha de até 8 digitos</mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline" >
+            <input matInput placeholder="Confirme a senha" name="senha">
+        </mat-form-field>
+        <mat-form-field appearance="outline"  >
+            <input matInput placeholder="Email" required [(ngModel)]="users.email" name="email" #email="ngModel">
+            <mat-hint *ngIf="name.errors?.['required']">*Entre com um email para contato</mat-hint>
+        </mat-form-field>
+        <button mat-raised-button class="cadastro" [disabled]="!loginForm.form.valid" (click)="cadastrarCliente()">
+            Cadastrar
+        </button>
+        <button mat-raised-button class="cadastro" (click)="cancel()">
+            Login
+        </button>
+    </form> 
+</mat-card>

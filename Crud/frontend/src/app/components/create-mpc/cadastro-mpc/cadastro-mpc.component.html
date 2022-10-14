@@ -1,0 +1,33 @@
+<mat-card>
+    <mat-card-title>Cadastro MPC</mat-card-title>
+    <form class="form">
+        <div class="input-group">
+            <div class="content-1">
+                <mat-form-field class="inputs" appearance="outline">
+                    <input matInput placeholder="Nome do cliente" name="name">
+                </mat-form-field>
+                <mat-form-field class="inputs" appearance="outline">
+                    <input matInput placeholder="Nome do módulo"  name="description">
+                </mat-form-field>
+            </div>
+            <div class="content-2">
+                <mat-form-field appearance="outline">
+                    <input matInput placeholder="Quantidade"  name="description">
+                </mat-form-field>
+                <mat-form-field class="inputs" appearance="outline">
+                    <input matInput placeholder="Data"  name="description">
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="form-check form-switch">
+            <input class="toggle" type="checkbox" name="status" id="check">
+            <label class="label" for="check"></label>
+        </div>  
+    </form>
+</mat-card>
+<button mat-raised-button class="salvar" >
+    Salvar
+</button>
+<button mat-raised-button class="cancelar">
+    Cancelar
+</button>

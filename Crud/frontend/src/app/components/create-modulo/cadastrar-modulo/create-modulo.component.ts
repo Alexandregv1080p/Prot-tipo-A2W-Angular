@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Modulo } from '../module.model';
 import { ModuloLogService } from '../modulo-log.service';
 
 @Component({
@@ -11,10 +12,23 @@ export class CreateModuloComponent implements OnInit {
 
   constructor(private moduloService: ModuloLogService,private router: Router) { }
 
+  modulo:Modulo = {
+    name:'',
+    status: false,
+    description:''
+  }
+
+
   ngOnInit(): void {
   }
   cadastrarModulo():void{
-    this.moduloService.showMensage('Módulo cadastrado com sucesso')
+    this.moduloService.create(this.modulo).subscribe(()=>{
+      this.moduloService.showMensage('Módulo cadastrado com sucesso')
+      this.router.navigate(["modulos"])
+    })
+    
+  }
+  cancel():void{
     this.router.navigate(["modulos"])
   }
 }
