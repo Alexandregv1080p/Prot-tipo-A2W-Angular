@@ -1,3 +1,5 @@
+import { CadastroMpcComponent } from './components/create-mpc/cadastro-mpc/cadastro-mpc.component';
+import { ModuloPorClienteComponent } from './views/modulo-por-cliente/modulo-por-cliente.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './views/home/home.component';
@@ -35,6 +37,16 @@ const routes: Routes = [{
   component: CreateModuloComponent,
   canActivate: [AuthGuard]
 },{
+  path:"modulos-por-cliente",
+  component: ModuloPorClienteComponent,
+  canActivate: [AuthGuard]
+},
+{
+  path:"cadastro-mpc",
+  component: CadastroMpcComponent,
+  canActivate: [AuthGuard]
+},
+{
   path:"login",
   component: LoginComponent
 },{

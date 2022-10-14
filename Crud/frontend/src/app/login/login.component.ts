@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
       console.log(usuarios)
     }) 
     this.loginForm = this.formBuild.group({
-      name:['',Validators.required],
+      email:['',Validators.required],
       senha:['',Validators.required]
   })
     this.ususarioAutenticado = false
@@ -42,9 +42,9 @@ export class LoginComponent implements OnInit {
     this.router.navigate(["cadastro-usuario"])
   }
   loginProces(usuarios: any):void{
-    if(usuarios.name){
+    if(usuarios.email){
       this.usuarios.forEach((item:any)=>{
-        if(item.name === usuarios.name && item.senha === usuarios.senha){
+        if(item.email === usuarios.email && item.senha === usuarios.senha){
           this.authService.showMensage('Usuario logado!')
           localStorage.setItem("Está logado", "true")
           this.router.navigate([""])
