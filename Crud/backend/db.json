@@ -13,6 +13,12 @@
       "status": true,
       "description": "Cadastrado em tal dia",
       "id": 1
+    },
+    {
+      "name": "Módulo 1",
+      "status": false,
+      "description": "Módulo insersivo",
+      "id": 2
     }
   ],
   "usuarios": [

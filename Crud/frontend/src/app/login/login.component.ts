@@ -1,3 +1,4 @@
+import { map } from 'rxjs/operators';
 import { Usuario } from './users.module';
 import { HttpClient } from '@angular/common/http';
 import { LogServService } from './log-serv.service';
@@ -12,9 +13,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  loginForm: FormGroup
+  loginForm:any = FormGroup
 
-  usuarios : any = []
+  usuarios : any 
 
   ususarioAutenticado : boolean
 
@@ -38,8 +39,26 @@ export class LoginComponent implements OnInit {
   irParaCadastro(){
     this.router.navigate(["cadastro-usuario"])
   }
-  loginProces(){
-    console.log(this.loginForm.getRawValue())
-}
+  irParaHome(){
+    if(this.ususarioAutenticado == true){
+      this.router.navigate([""])
+    }  
+  }
 
-}
+  loginProces(usuarios: any){
+      for(let a of this.usuarios){
+        if(usuarios.email == a.email && usuarios.senha == a.senha){
+          this.authService.showMensage('Usuario logado!')
+          localStorage.setItem("isLoggedIn", "true")
+          
+        }
+        else{
+          this.authService.showMensage('Usuario inválido')
+          localStorage.clear();
+          console.log(usuarios.email === a.email ? 'true' : 'false' )  
+          this.router.navigate([""]) 
+        }
+      }
+    }
+
+  }
