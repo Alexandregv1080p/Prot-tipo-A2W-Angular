@@ -26,8 +26,8 @@ export class LogServService {
   create(urser:Usuario):Observable<Usuario>{
     return this.http.post<Usuario>(this.baseUrl,urser)
   }
-  getUser():Observable<Usuario[]>{
-    return this.http.get<Usuario[]>(this.baseUrl)
+  getUser(){
+    return this.http.get(this.baseUrl)
   }
 
 }
