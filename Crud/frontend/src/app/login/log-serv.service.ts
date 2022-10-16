@@ -15,6 +15,8 @@ export class LogServService {
   loginForm: FormGroup
 
   baseUrl = "http://localhost:3001/usuarios"
+  urlUsers = "http://localhost:3001/usuarios-logados"
+
 
   showMensage(msg: string):void{
     this.snackBar.open(msg,'Fechar',{
@@ -28,6 +30,9 @@ export class LogServService {
   }
   getUser(){
     return this.http.get(this.baseUrl)
+  }
+  logarUser(urser:Usuario):Observable<Usuario>{
+    return this.http.post<Usuario>(this.urlUsers,urser)
   }
 
 }

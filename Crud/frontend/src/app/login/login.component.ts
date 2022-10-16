@@ -49,14 +49,18 @@ export class LoginComponent implements OnInit {
       for(let a of this.usuarios){
         if(usuarios.email == a.email && usuarios.senha == a.senha){
           this.authService.showMensage('Usuario logado!')
-          localStorage.setItem("isLoggedIn", "true")
+          this.authService.logarUser(this.usuarios).subscribe(()=>{
+            localStorage.setItem("Está logado", "true")
+            this.router.navigate([""]) 
+          })
+          break
           
         }
         else{
           this.authService.showMensage('Usuario inválido')
           localStorage.clear();
           console.log(usuarios.email === a.email ? 'true' : 'false' )  
-          this.router.navigate([""]) 
+          
         }
       }
     }
