@@ -49,10 +49,9 @@ export class LoginComponent implements OnInit {
       for(let a of this.usuarios){
         if(usuarios.email == a.email && usuarios.senha == a.senha){
           this.authService.showMensage('Usuario logado!')
-          this.authService.logarUser(this.usuarios).subscribe(()=>{
-            localStorage.setItem("Está logado", "true")
-            this.router.navigate([""]) 
-          })
+          localStorage.setItem("Está logado", "true")
+          console.log(a)
+          this.router.navigate([""]) 
           break
           
         }

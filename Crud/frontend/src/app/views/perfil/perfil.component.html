@@ -1,1 +1,27 @@
-<p>perfil works!</p>
+<mat-card>
+    <mat-card-title>Alterar dados do Usuário</mat-card-title>
+    <form class="form">
+        <mat-form-field appearance="outline">
+            <input matInput placeholder="Nome"  name="name">
+            <mat-hint>*Entre com seu nome completo</mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline" >
+            <input matInput placeholder="Email" name="description">
+        </mat-form-field>
+        <span>Alterar senha?</span>
+        <div class="senha-content">
+            <mat-form-field appearance="outline" class="senha" >
+                <input matInput placeholder="Email" name="description">
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="senha" >
+                <input matInput placeholder="Email" name="description">
+            </mat-form-field>
+        </div>
+    </form>
+</mat-card>
+<button mat-raised-button class="salvar">
+    Salvar
+</button>
+<button mat-raised-button class="cancelar" >
+    Cancelar
+</button>

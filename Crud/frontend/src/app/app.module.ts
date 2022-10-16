@@ -1,3 +1,4 @@
+import { ClienteComponent } from './components/createCliente/cliente/cliente.component';
 import { NgModule, EventEmitter } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -14,7 +15,6 @@ import { HomeComponent } from './views/home/home.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
-import { ClienteComponent } from './views/cliente/cliente.component';
 import { PerfilComponent } from './views/perfil/perfil.component';
 import { ModulosComponent } from './views/modulos/modulos.component';
 import { CadastrarClienteComponent } from './components/createCliente/cadastrar-cliente/cadastrar-cliente.component';
@@ -38,6 +38,7 @@ import { ModuloPorClienteComponent } from './views/modulo-por-cliente/modulo-por
 import { CadastroMpcComponent } from './components/create-mpc/cadastro-mpc/cadastro-mpc.component';
 import { TabelaCadastroMpcComponent } from './components/create-mpc/tabela-cadastro-mpc/tabela-cadastro-mpc.component';
 import { McpComponent } from './views/home/mcp/mcp.component';
+import { YupdateclienteComponent } from './components/createCliente/yupdatecliente/yupdatecliente.component';
 
 @NgModule({
   declarations: [
@@ -61,8 +62,7 @@ import { McpComponent } from './views/home/mcp/mcp.component';
     CadastroMpcComponent,
     TabelaCadastroMpcComponent,
     McpComponent,
-    
-    
+    YupdateclienteComponent,
   ],
   imports: [
     BrowserModule,
