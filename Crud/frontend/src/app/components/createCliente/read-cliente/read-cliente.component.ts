@@ -21,5 +21,10 @@ export class ReadClienteComponent implements OnInit {
       console.log(clientes)
     })
   }
-
+  navigateToClientUpdate(id:number){
+    this.router.navigate([`cliente/yupdatecliente/${id}`])
+  }
+  navigateToClientDelete(id:number){
+    this.router.navigate([`cliente/deletecliente/${id}`])
+  }
 }

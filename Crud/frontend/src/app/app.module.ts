@@ -39,6 +39,9 @@ import { CadastroMpcComponent } from './components/create-mpc/cadastro-mpc/cadas
 import { TabelaCadastroMpcComponent } from './components/create-mpc/tabela-cadastro-mpc/tabela-cadastro-mpc.component';
 import { McpComponent } from './views/home/mcp/mcp.component';
 import { YupdateclienteComponent } from './components/createCliente/yupdatecliente/yupdatecliente.component';
+import { DeleteClienteComponent } from './components/createCliente/delete-cliente/delete-cliente.component';
+import { UpdateModuloComponent } from './components/create-modulo/update-modulo/update-modulo.component';
+import { DelteModuloComponent } from './components/create-modulo/delte-modulo/delte-modulo.component';
 
 @NgModule({
   declarations: [
@@ -63,6 +66,9 @@ import { YupdateclienteComponent } from './components/createCliente/yupdateclien
     TabelaCadastroMpcComponent,
     McpComponent,
     YupdateclienteComponent,
+    DeleteClienteComponent,
+    UpdateModuloComponent,
+    DelteModuloComponent,
   ],
   imports: [
     BrowserModule,

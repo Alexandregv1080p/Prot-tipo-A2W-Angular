@@ -1,4 +1,4 @@
-import { Cliente } from './../cliente.model';
+import { Cliente } from '../cliente.model';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ClienteLogService } from '../cliente-log.service';
@@ -22,7 +22,7 @@ export class ClienteComponent implements OnInit {
     })
   }
   navigateToClientCreate(){
-    this.router.navigate(['createCliente/cadastrar-cliente'])
+    this.router.navigate(['cliente/cadastrar-cliente'])
   }
   
 }

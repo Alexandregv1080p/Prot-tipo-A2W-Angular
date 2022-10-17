@@ -1,10 +1,10 @@
 {
   "clientes": [
     {
-      "name": "Roberto",
+      "name": "Alvaro",
       "status": true,
-      "description": "Cadastrado em tal dia",
-      "id": 1
+      "description": "Cadastrado com sucesso",
+      "id": 2
     }
   ],
   "modulos": [
@@ -49,8 +49,8 @@
   ],
   "usuarios-logados": [
     {
-      "name":"",
-      "senha":""
+      "name": "",
+      "senha": ""
     }
   ],
   "mpc": [

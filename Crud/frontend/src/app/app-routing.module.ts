@@ -1,3 +1,6 @@
+import { UpdateModuloComponent } from './components/create-modulo/update-modulo/update-modulo.component';
+import { DelteModuloComponent } from './components/create-modulo/delte-modulo/delte-modulo.component';
+import { DeleteClienteComponent } from './components/createCliente/delete-cliente/delete-cliente.component';
 import { ClienteComponent } from './components/createCliente/cliente/cliente.component';
 import { CadastroMpcComponent } from './components/create-mpc/cadastro-mpc/cadastro-mpc.component';
 import { ModuloPorClienteComponent } from './views/modulo-por-cliente/modulo-por-cliente.component';
@@ -26,7 +29,7 @@ const routes: Routes = [{
   component: PerfilComponent,
   canActivate: [AuthGuard]
 },{
-  path:"createCliente/cadastrar-cliente",
+  path:"cliente/cadastrar-cliente",
   component:CadastrarClienteComponent,
   canActivate: [AuthGuard]
 },
@@ -55,8 +58,17 @@ const routes: Routes = [{
   path:"cadastro-usuario",
   component: CadastroUsuarioComponent 
 },{
-  path:"./yupdatecliente",
+  path:"cliente/yupdatecliente/:id",
   component: YupdateclienteComponent
+},{
+  path:"cliente/deletecliente/:id",
+  component: DeleteClienteComponent
+},{
+  path:"create-modulo/update-modulo/:id",
+  component: UpdateModuloComponent
+},{
+  path:"create-modulo/delete-modulo/:id",
+  component:  DelteModuloComponent
 }
 ];
 

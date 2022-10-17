@@ -31,4 +31,16 @@ export class ModuloLogService {
   read(): Observable<Modulo[]> {
     return this.http.get<Modulo[]>(this.baseUrl)
   }
+  readById(id: string):Observable<Modulo>{
+    let url = `${this.baseUrl}/${id}`
+    return this.http.get<Modulo>(url)
+  }
+  update(cliente: Modulo):Observable<Modulo>{
+    let url = `${this.baseUrl}/${cliente.id}`
+    return this.http.put<Modulo>(url,cliente)
+  }
+  delete(id: number):Observable<Modulo>{
+    let url = `${this.baseUrl}/${id}`
+    return this.http.delete<Modulo>(url)
+  }
 }

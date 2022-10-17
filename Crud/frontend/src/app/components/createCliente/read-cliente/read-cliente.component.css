@@ -24,4 +24,9 @@ th{
     border-radius: 8px;
     overflow:hidden ;
 }
-
+.editar{
+    color: #5fcf7f;
+}
+.deletar{
+    color:crimson
+}

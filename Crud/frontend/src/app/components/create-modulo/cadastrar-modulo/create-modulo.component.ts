@@ -15,7 +15,8 @@ export class CreateModuloComponent implements OnInit {
   modulo:Modulo = {
     name:'',
     status: false,
-    description:''
+    description:'',
+    id:1
   }
 
 

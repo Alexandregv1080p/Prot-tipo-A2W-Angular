@@ -1,5 +1,5 @@
 export interface Modulo{
-    id?: number
+    id: number
     name: string
     status:boolean
     description?:string
