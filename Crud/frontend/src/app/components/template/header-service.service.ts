@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class NavServiceService {
+export class HeaderServiceService {
   visible : boolean
 
   constructor() { this.visible = false }
@@ -16,4 +16,5 @@ export class NavServiceService {
   toggle(){
     this.visible = !this.visible
   }
+
 }

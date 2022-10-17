@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { LogServService } from 'src/app/login/log-serv.service';
 import { LoginComponent } from 'src/app/login/login.component';
 import { Observable } from 'rxjs';
+import { NavServiceService } from '../nav-service.service';
 
 @Component({
   selector: 'app-nav',
@@ -16,12 +17,13 @@ export class NavComponent implements OnInit {
   isMenuOpened:boolean = false;
   isMenuOpened2:boolean = false;
 
-  constructor(private router: Router,public logServ: LogServService ) {this.visible =false }
+  constructor(private router: Router,public logServ: LogServService , public nav: NavServiceService) {}
   
   isAutenticado = false
 
   ngOnInit(): void {
-    
+    this.nav.show();
+
   }
   
   toggleMenu():void {
