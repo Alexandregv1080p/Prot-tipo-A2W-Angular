@@ -13,13 +13,11 @@
 .form-check{
     width: 20%;
 }
+
 .mat-card {
     width: 19%;
-    margin: auto;
-}
-.mat-card {
-    width: 19%;
-    margin: auto;
+    margin: auto auto;
+    
 }
 .mat-card-title{
     justify-content: center;

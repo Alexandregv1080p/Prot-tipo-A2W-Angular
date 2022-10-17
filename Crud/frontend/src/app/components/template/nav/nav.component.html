@@ -1,6 +1,6 @@
-<mat-sidenav-container>
-    <mat-sidenav class="sidenav" mode="side" opened fixedInViewport="true" fixedTopGap="90">
-        <mat-nav-list class="menu-container">
+<mat-sidenav-container >
+    <mat-sidenav class="sidenav" mode="side" opened fixedInViewport="true" fixedTopGap="90" *ngIf="nav.visible">
+        <mat-nav-list class="menu-container" >
             <a mat-list-item routerLink="">
                 <i class="material-icons" >
                     home

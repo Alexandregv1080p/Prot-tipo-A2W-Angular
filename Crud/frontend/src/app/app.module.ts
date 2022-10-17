@@ -1,5 +1,5 @@
 import { ClienteComponent } from './components/createCliente/cliente/cliente.component';
-import { NgModule, EventEmitter } from '@angular/core';
+import { NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -88,6 +88,7 @@ import { DelteModuloComponent } from './components/create-modulo/delte-modulo/de
     MatSnackBarModule,
     HttpClientModule,
     ReactiveFormsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

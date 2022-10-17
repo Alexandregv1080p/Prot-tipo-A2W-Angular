@@ -45,6 +45,12 @@
       "senha": "123",
       "email": "robs@gmail.com",
       "id": 5
+    },
+    {
+      "name": "claudio",
+      "senha": "123456",
+      "email": "claudio@hotmail.com",
+      "id": 6
     }
   ],
   "usuarios-logados": [

@@ -1,10 +1,7 @@
-import { map } from 'rxjs/operators';
-import { Usuario } from './users.module';
-import { HttpClient } from '@angular/common/http';
 import { LogServService } from './log-serv.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-login',
@@ -17,7 +14,9 @@ export class LoginComponent implements OnInit {
 
   usuarios : any 
 
-  ususarioAutenticado : boolean
+  isAutenticado = false
+
+  mostrarMenu: boolean = false
 
   constructor(private router: Router,
     private formBuild: FormBuilder,
@@ -35,29 +34,29 @@ export class LoginComponent implements OnInit {
       email:['',Validators.required],
       senha:['',Validators.required]
   })
+  this.authService.mostrarMenu.subscribe(
+    mostrar => this.mostrarMenu = mostrar
+  )
   }
   irParaCadastro(){
     this.router.navigate(["cadastro-usuario"])
   }
-  irParaHome(){
-    if(this.ususarioAutenticado == true){
-      this.router.navigate([""])
-    }  
-  }
-
   loginProces(usuarios: any){
       for(let a of this.usuarios){
         if(usuarios.email == a.email && usuarios.senha == a.senha){
           this.authService.showMensage('Usuario logado!')
           localStorage.setItem("Está logado", "true")
+          let name = localStorage.getItem('Está logado'); 
+          this.isAutenticado = true
+          console.log(name)
           console.log(a)
           this.router.navigate([""]) 
           break
-          
         }
         else{
           this.authService.showMensage('Usuario inválido')
           localStorage.clear();
+          this.authService.mostrarMenu.emit(false)
           console.log(usuarios.email === a.email ? 'true' : 'false' )  
           
         }
