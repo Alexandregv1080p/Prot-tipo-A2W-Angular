@@ -69,6 +69,9 @@ const routes: Routes = [{
 },{
   path:"create-modulo/delete-modulo/:id",
   component:  DelteModuloComponent
+},{
+  path:"modulos-por-cliente/delete-mpc/:id",
+  component: ModuloPorClienteComponent
 }
 ];
 

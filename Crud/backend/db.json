@@ -53,12 +53,6 @@
       "id": 6
     }
   ],
-  "usuarios-logados": [
-    {
-      "name": "",
-      "senha": ""
-    }
-  ],
   "mpc": [
     {
       "nome-cliente": "José",
@@ -66,6 +60,14 @@
       "quantidade": 2,
       "data": "20-10-2022",
       "status": true
+    },
+    {
+      "nomeCliente": "",
+      "nomeModulo": "",
+      "quantidade": null,
+      "data": "",
+      "status": false,
+      "id": 1
     }
   ]
 }

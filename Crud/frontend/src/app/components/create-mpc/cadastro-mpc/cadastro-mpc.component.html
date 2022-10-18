@@ -4,30 +4,30 @@
         <div class="input-group">
             <div class="content-1">
                 <mat-form-field class="inputs" appearance="outline">
-                    <input matInput placeholder="Nome do cliente" name="name">
+                    <input matInput placeholder="Nome do cliente" [(ngModel)]="mpc.nomeCliente" name="name">
                 </mat-form-field>
                 <mat-form-field class="inputs" appearance="outline">
-                    <input matInput placeholder="Nome do módulo"  name="description">
+                    <input matInput placeholder="Nome do módulo" [(ngModel)]="mpc.nomeModulo"  name="description">
                 </mat-form-field>
             </div>
             <div class="content-2">
                 <mat-form-field appearance="outline">
-                    <input matInput placeholder="Quantidade"  name="description">
+                    <input matInput placeholder="Quantidade" [(ngModel)]="mpc.nomeCliente"  name="description">
                 </mat-form-field>
                 <mat-form-field class="inputs" appearance="outline">
-                    <input matInput placeholder="Data"  name="description">
+                    <input matInput placeholder="Data" type="date" [(ngModel)]="mpc.data" name="description">
                 </mat-form-field>
             </div>
         </div>
         <div class="form-check form-switch">
-            <input class="toggle" type="checkbox" name="status" id="check">
+            <input class="toggle" type="checkbox" [(ngModel)]="mpc.status" name="status" id="check">
             <label class="label" for="check"></label>
         </div>  
     </form>
 </mat-card>
-<button mat-raised-button class="salvar" >
+<button mat-raised-button class="salvar" (click)="cadastrarMpc()" >
     Salvar
 </button>
-<button mat-raised-button class="cancelar">
+<button mat-raised-button class="cancelar" (click)="cancel()">
     Cancelar
 </button>

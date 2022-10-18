@@ -1,5 +1,7 @@
+import { Router } from '@angular/router';
 import { Mpc } from './../mpc.model';
 import { Component, OnInit } from '@angular/core';
+import { MpcSevService } from '../mpc-sev.service';
 
 @Component({
   selector: 'app-cadastro-mpc',
@@ -8,18 +10,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastroMpcComponent implements OnInit {
 
-  constructor() { }
+  constructor(private mpcService: MpcSevService,private router:Router) { }
 
   mpc : Mpc = {
-    nomeCliente: "José",
-    nomeModulo: 'Módulo 1',
-    quantidade: 2,
-    data:'20-10-2022',
-    status: true,
+    nomeCliente: "",
+    nomeModulo: '',
+    quantidade: null,
+    data:'',
+    status: false,
     id: 1
   }
   ngOnInit(): void {
 
   }
-
+  cadastrarMpc():void{
+    this.mpcService.create(this.mpc).subscribe(()=>{
+      this.mpcService.showMensage('Mpc cadastrado com sucesso')
+      this.router.navigate(["mpc"])
+      this.router.navigate(["modulos-por-cliente"])
+    })
+    
+  }
+  cancel():void{
+    this.router.navigate(["modulos-por-cliente"])
+  }
 }

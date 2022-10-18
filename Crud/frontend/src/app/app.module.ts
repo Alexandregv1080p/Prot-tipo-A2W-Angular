@@ -42,6 +42,9 @@ import { YupdateclienteComponent } from './components/createCliente/yupdateclien
 import { DeleteClienteComponent } from './components/createCliente/delete-cliente/delete-cliente.component';
 import { UpdateModuloComponent } from './components/create-modulo/update-modulo/update-modulo.component';
 import { DelteModuloComponent } from './components/create-modulo/delte-modulo/delte-modulo.component';
+import { ReadMpcComponent } from './components/create-mpc/read-mpc/read-mpc.component';
+import { UpdateMpcComponent } from './components/create-mpc/update-mpc/update-mpc.component';
+import { DeleteMpcComponent } from './components/create-mpc/delete-mpc/delete-mpc.component';
 
 @NgModule({
   declarations: [
@@ -69,6 +72,9 @@ import { DelteModuloComponent } from './components/create-modulo/delte-modulo/de
     DeleteClienteComponent,
     UpdateModuloComponent,
     DelteModuloComponent,
+    ReadMpcComponent,
+    UpdateMpcComponent,
+    DeleteMpcComponent,
   ],
   imports: [
     BrowserModule,
