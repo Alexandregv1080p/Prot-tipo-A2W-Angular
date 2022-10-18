@@ -1,3 +1,5 @@
+import { UpdateMpcComponent } from './components/create-mpc/update-mpc/update-mpc.component';
+import { DeleteMpcComponent } from './components/create-mpc/delete-mpc/delete-mpc.component';
 import { UpdateModuloComponent } from './components/create-modulo/update-modulo/update-modulo.component';
 import { DelteModuloComponent } from './components/create-modulo/delte-modulo/delte-modulo.component';
 import { DeleteClienteComponent } from './components/createCliente/delete-cliente/delete-cliente.component';
@@ -71,7 +73,10 @@ const routes: Routes = [{
   component:  DelteModuloComponent
 },{
   path:"modulos-por-cliente/delete-mpc/:id",
-  component: ModuloPorClienteComponent
+  component: DeleteMpcComponent
+},{
+  path:"modulos-por-cliente/update-mpc/:id",
+  component: UpdateMpcComponent
 }
 ];
 

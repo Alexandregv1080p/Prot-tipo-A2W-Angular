@@ -13,7 +13,7 @@ export class ReadMpcComponent implements OnInit {
   constructor(private mpcService: MpcSevService,private router:Router) { }
 
   mpc: Mpc[]
-  displayedColumns = ['id','name','modulo','status','action']
+  displayedColumns = ['id','nomeCliente','nomeModulo','status','action']
 
   ngOnInit(): void {
     this.mpcService.read().subscribe(mpc =>{
@@ -21,11 +21,11 @@ export class ReadMpcComponent implements OnInit {
       console.log(mpc)
     })
   }
-  navigateToMpcUpdate(){
-
+  navigateToMpcUpdate(id:number){
+    this.router.navigate([`modulos-por-cliente/update-mpc/${id}`])
   }
-  navigateToMpcDelete(){
-
+  navigateToMpcDelete(id:number){
+    this.router.navigate([`modulos-por-cliente/delete-mpc/${id}`])
   }
 
 }
