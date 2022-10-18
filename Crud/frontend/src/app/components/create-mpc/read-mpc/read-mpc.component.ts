@@ -2,6 +2,8 @@ import { Router } from '@angular/router';
 import { Mpc } from './../mpc.model';
 import { Component, OnInit } from '@angular/core';
 import { MpcSevService } from '../mpc-sev.service';
+import { Modulo } from '../../create-modulo/module.model';
+import { Cliente } from '../../createCliente/cliente.model';
 
 @Component({
   selector: 'app-read-mpc',
@@ -13,6 +15,8 @@ export class ReadMpcComponent implements OnInit {
   constructor(private mpcService: MpcSevService,private router:Router) { }
 
   mpc: Mpc[]
+  modulos: Modulo[]
+  clientes: Cliente[]
   displayedColumns = ['id','nomeCliente','nomeModulo','status','action']
 
   ngOnInit(): void {
@@ -20,6 +24,7 @@ export class ReadMpcComponent implements OnInit {
       this.mpc = mpc
       console.log(mpc)
     })
+    
   }
   navigateToMpcUpdate(id:number){
     this.router.navigate([`modulos-por-cliente/update-mpc/${id}`])

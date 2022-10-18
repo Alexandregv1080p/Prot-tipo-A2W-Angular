@@ -40,9 +40,6 @@ export class LoginComponent implements OnInit {
       email:['',Validators.required],
       senha:['',Validators.required]
   })
-  this.authService.mostrarMenu.subscribe(
-    mostrar => this.mostrarMenu = mostrar
-  )
   }
   irParaCadastro(){
     this.router.navigate(["cadastro-usuario"])
