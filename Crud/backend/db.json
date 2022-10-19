@@ -71,13 +71,38 @@
       "id": 1
     },
     {
-      "id": 2
+      "clientes": {
+        "name": "José",
+        "status": true,
+        "description": "Sem descrição disponível",
+        "id": 3,
+        "modulosPCliente": []
+      },
+      "modulos": {
+        "name": "Módulo 1",
+        "status": false,
+        "description": "Módulo insersivo",
+        "id": 2
+      },
+      "quantidadeCliente": "12",
+      "id": 5
     },
     {
-      "id": 3
-    },
-    {
-      "id": 4
+      "clientes": {
+        "name": "Alvaro",
+        "status": true,
+        "description": "Cadastrado com sucesso",
+        "id": 2,
+        "modulosPCliente": []
+      },
+      "modulos": {
+        "name": "Módulo 2",
+        "status": true,
+        "description": "",
+        "id": 1
+      },
+      "quantidadeCliente": "15",
+      "id": 6
     }
   ]
 }

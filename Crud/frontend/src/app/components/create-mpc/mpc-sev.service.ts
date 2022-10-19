@@ -27,7 +27,7 @@ export class MpcSevService {
   create(cliente:Modcliente):Observable<Modcliente>{
     return this.http.post<Modcliente>(this.baseUrl,cliente)
   }
-  read(): Observable<Modcliente[]> {
+  read(): Observable<any[]> {
     return this.http.get<Modcliente[]>(this.baseUrl)
   }
   readModulos(): Observable<Modulo[]> {
@@ -36,10 +36,10 @@ export class MpcSevService {
   readClientes(): Observable<Cliente[]> {
     return this.http.get<Cliente[]>(this.clientesUrl)
   }
-  readById(id: string):Observable<any>{
-    let url = `${this.baseUrl}/${id}`
-    return this.http.get<any>(this.clientesUrl)
-  }
+    readById(id: string):Observable<any>{
+      let url = `${this.baseUrl}/${id}`
+      return this.http.get<any>(this.clientesUrl)
+    }
   readByIdCliente(id: string):Observable<any>{
     let url = `${this.baseUrl}/${id}`
     return this.http.get<any>(this.clientesUrl)

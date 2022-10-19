@@ -1,6 +1,6 @@
 export interface Modcliente{
-    cliente: {}
-    modulo: {}
+    clientes : {}
+    modulos : {}
     quantidadeCliente: ''
     id: null
   }

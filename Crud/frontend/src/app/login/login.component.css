@@ -14,10 +14,10 @@
     width: 20%;
 }
 
-.mat-card {
+.mat-card { 
     width: 19%;
     margin: auto auto;
-    
+    margin-top: 200px;
 }
 .mat-card-title{
     justify-content: center;
@@ -27,4 +27,8 @@
 }
 .cadastro{
     margin-top: 15px;
+}
+.background{
+    background: url("C:\Users\Usuario\Desktop\Git e Github\Meu Projetos\Prot-tipo-A2W-Angular\Crud\frontend\src\assets\imgs/agronegocio.jpg");
+    background: no-repeat;
 }

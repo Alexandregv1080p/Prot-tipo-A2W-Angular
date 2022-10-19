@@ -3,20 +3,29 @@
     <form class="form">
         <div class="input-group">
             <div class="content-1">
-                <mat-select name="modulo" [(ngModel)]= "modcliente.cliente">
-                    <mat-option *ngFor="let c of clientes" [value]="c">
-                        {{ c.name }}
-                    </mat-option>
-                </mat-select>
-                <select name="" id="">
-                    <option value="">Entre com o nome do módulo</option>
-                    <option value=""></option>
-                </select>
+                <mat-form-field appearance="fill">
+                    <mat-label>Cliente</mat-label>
+                    <mat-select name="name" [(ngModel)]= "modcliente.clientes">
+                        <mat-option *ngFor="let c of clientes" [value]="c">
+                            {{ c.name}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Módulo</mat-label>
+                    <mat-select name="name" [(ngModel)]= "modcliente.modulos">
+                        <mat-option *ngFor="let m of modulos" [value]="m">
+                            {{ m.name }}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
             </div>
             <div class="content-2">
-                <mat-form-field appearance="outline">
-                    <input matInput placeholder="Quantidade">
-                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Quantidade Cliente</mat-label>
+                    <input matInput  placeholder="Ex. 12" name= "quantidadeCliente"[(ngModel)]= "modcliente.quantidadeCliente">
+                    <span matSuffix>un</span>
+                  </mat-form-field>
                 <mat-form-field class="inputs" appearance="outline">
                     <input matInput placeholder="Data" type="date">
                 </mat-form-field>
@@ -28,7 +37,7 @@
         </div>  
     </form>
 </mat-card>
-<button mat-raised-button class="salvar">
+<button mat-raised-button class="salvar" (click)="adicionarMod()">
     Salvar
 </button>
 <button mat-raised-button class="cancelar" (click)="cancel()">
