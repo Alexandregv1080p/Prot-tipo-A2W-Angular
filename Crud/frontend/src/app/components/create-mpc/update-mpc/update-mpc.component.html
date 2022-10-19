@@ -1,0 +1,33 @@
+<mat-card>
+    <mat-card-title>Cadastro MPC</mat-card-title>
+    <form class="form">
+        <div class="input-group">
+            <div class="content-1">
+                <mat-form-field class="inputs" appearance="outline">
+                    <input matInput placeholder="Nome do cliente" [(ngModel)]="mpc.nomeCliente" name="nomeCliente">
+                </mat-form-field>
+                <mat-form-field class="inputs" appearance="outline">
+                    <input matInput placeholder="Nome do módulo" [(ngModel)]="mpc.nomeModulo"  name="nomeModulo">
+                </mat-form-field>
+            </div>
+            <div class="content-2">
+                <mat-form-field appearance="outline">
+                    <input matInput placeholder="Quantidade" [(ngModel)]="mpc.quantidade"  name="quantidade">
+                </mat-form-field>
+                <mat-form-field class="inputs" appearance="outline">
+                    <input matInput placeholder="Data" type="date" [(ngModel)]="mpc.data" name="data">
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="form-check form-switch">
+            <input class="toggle" type="checkbox" [(ngModel)]="mpc.status" name="status" id="check">
+            <label class="label" for="check"></label>
+        </div>  
+    </form>
+</mat-card>
+<button mat-raised-button class="salvar" (click)="updateCliente()" >
+    Salvar
+</button>
+<button mat-raised-button class="cancelar" (click)="cancel()">
+    Cancelar
+</button>

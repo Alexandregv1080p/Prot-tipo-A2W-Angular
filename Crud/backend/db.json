@@ -1,27 +1,82 @@
 {
   "clientes": [
     {
-      "name": "Roberto",
+      "name": "Alvaro",
       "status": true,
-      "description": "Cadastrado em tal dia",
-      "id": 1
+      "description": "Cadastrado com sucesso",
+      "id": 2,
+      "modulosPCliente": []
     },
     {
-      "name": "Cliente Teste2",
+      "name": "José",
       "status": true,
-      "description": "Cadastrado",
+      "description": "Sem descrição disponível",
+      "id": 3,
+      "modulosPCliente": []
+    }
+  ],
+  "modulos": [
+    {
+      "name": "Módulo 1",
+      "status": false,
+      "description": "Módulo insersivo",
       "id": 2
     },
     {
-      "name": "Cliente Teste2",
+      "name": "Módulo 2",
       "status": true,
-      "description": "Cadastrado",
+      "description": "",
+      "id": 1
+    }
+  ],
+  "usuarios": [
+    {
+      "name": "Alvaro",
+      "senha": "123456",
+      "email": "Alvaro@gmail.com",
+      "id": 1
+    },
+    {
+      "name": "Alexandre",
+      "senha": "1234",
+      "email": "alexandregv@gmail.com",
       "id": 3
     },
     {
-      "name": "Cliente Teste2",
+      "name": "Ana",
+      "senha": "123",
+      "email": "ana@hotmail.com",
+      "id": 4
+    },
+    {
+      "name": "Roberto",
+      "senha": "123",
+      "email": "robs@gmail.com",
+      "id": 5
+    },
+    {
+      "name": "claudio",
+      "senha": "123456",
+      "email": "claudio@hotmail.com",
+      "id": 6
+    }
+  ],
+  "mpc": [
+    {
+      "nomeCliente": "Alvaro",
+      "nomeModulo": "Módulo 1",
+      "quantidade": "5",
+      "data": "2022-10-18",
       "status": true,
-      "description": "Cadastrado",
+      "id": 1
+    },
+    {
+      "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
       "id": 4
     }
   ]
