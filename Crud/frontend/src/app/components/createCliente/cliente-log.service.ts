@@ -27,4 +27,19 @@ export class ClienteLogService {
   create(cliente:Cliente):Observable<Cliente>{
     return this.http.post<Cliente>(this.baseUrl,cliente)
   }
+  read(): Observable<Cliente[]> {
+    return this.http.get<Cliente[]>(this.baseUrl)
+  }
+  readById(id: string):Observable<Cliente>{
+    let url = `${this.baseUrl}/${id}`
+    return this.http.get<Cliente>(url)
+  }
+  update(cliente: Cliente):Observable<Cliente>{
+    let url = `${this.baseUrl}/${cliente.id}`
+    return this.http.put<Cliente>(url,cliente)
+  }
+  delete(id: number):Observable<Cliente>{
+    let url = `${this.baseUrl}/${id}`
+    return this.http.delete<Cliente>(url)
+  }
 }

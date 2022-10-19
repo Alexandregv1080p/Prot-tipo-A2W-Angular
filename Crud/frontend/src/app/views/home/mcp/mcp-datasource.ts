@@ -5,43 +5,42 @@ import { map } from 'rxjs/operators';
 import { Observable, of as observableOf, merge } from 'rxjs';
 
 // TODO: Replace this with your own data model type
-export interface TabelaItem {
+export interface McpItem {
   name: string;
   id: number;
-  status: boolean;
 }
 
 // TODO: replace this with real data from your application
-const EXAMPLE_DATA: TabelaItem[] = [
-  {id: 1, name: 'Hydrogen', status:true},
-  {id: 2, name: 'Helium', status:true},
-  {id: 3, name: 'Lithium', status:true},
-  {id: 4, name: 'Beryllium', status:true},
-  {id: 5, name: 'Boron', status:true},
-  {id: 6, name: 'Carbon', status:true},
-  {id: 7, name: 'Nitrogen', status:true},
-  {id: 8, name: 'Oxygen', status:true},
-  {id: 9, name: 'Fluorine', status:true},
-  {id: 10, name: 'Neon', status:true},
-  {id: 11, name: 'Sodium', status:true},
-  {id: 12, name: 'Magnesium', status:true},
-  {id: 13, name: 'Aluminum', status:true},
-  {id: 14, name: 'Silicon', status:true},
-  {id: 15, name: 'Phosphorus', status:true},
-  {id: 16, name: 'Sulfur', status:true},
-  {id: 17, name: 'Chlorine', status:true},
-  {id: 18, name: 'Argon', status:true},
-  {id: 19, name: 'Potassium', status:true},
-  {id: 20, name: 'Calcium', status:true},
+const EXAMPLE_DATA: McpItem[] = [
+  {id: 1, name: 'Hydrogen'},
+  {id: 2, name: 'Helium'},
+  {id: 3, name: 'Lithium'},
+  {id: 4, name: 'Beryllium'},
+  {id: 5, name: 'Boron'},
+  {id: 6, name: 'Carbon'},
+  {id: 7, name: 'Nitrogen'},
+  {id: 8, name: 'Oxygen'},
+  {id: 9, name: 'Fluorine'},
+  {id: 10, name: 'Neon'},
+  {id: 11, name: 'Sodium'},
+  {id: 12, name: 'Magnesium'},
+  {id: 13, name: 'Aluminum'},
+  {id: 14, name: 'Silicon'},
+  {id: 15, name: 'Phosphorus'},
+  {id: 16, name: 'Sulfur'},
+  {id: 17, name: 'Chlorine'},
+  {id: 18, name: 'Argon'},
+  {id: 19, name: 'Potassium'},
+  {id: 20, name: 'Calcium'},
 ];
 
 /**
- * Data source for the Tabela view. This class should
+ * Data source for the Mcp view. This class should
  * encapsulate all logic for fetching and manipulating the displayed data
  * (including sorting, pagination, and filtering).
  */
-export class TabelaDataSource extends DataSource<TabelaItem> {
-  data: TabelaItem[] = EXAMPLE_DATA;
+export class McpDataSource extends DataSource<McpItem> {
+  data: McpItem[] = EXAMPLE_DATA;
   paginator: MatPaginator | undefined;
   sort: MatSort | undefined;
 
@@ -54,7 +53,7 @@ export class TabelaDataSource extends DataSource<TabelaItem> {
    * the returned stream emits new items.
    * @returns A stream of the items to be rendered.
    */
-  connect(): Observable<TabelaItem[]> {
+  connect(): Observable<McpItem[]> {
     if (this.paginator && this.sort) {
       // Combine everything that affects the rendered data into one update
       // stream for the data-table to consume.
@@ -77,7 +76,7 @@ export class TabelaDataSource extends DataSource<TabelaItem> {
    * Paginate the data (client-side). If you're using server-side pagination,
    * this would be replaced by requesting the appropriate data from the server.
    */
-  private getPagedData(data: TabelaItem[]): TabelaItem[] {
+  private getPagedData(data: McpItem[]): McpItem[] {
     if (this.paginator) {
       const startIndex = this.paginator.pageIndex * this.paginator.pageSize;
       return data.splice(startIndex, this.paginator.pageSize);
@@ -90,7 +89,7 @@ export class TabelaDataSource extends DataSource<TabelaItem> {
    * Sort the data (client-side). If you're using server-side sorting,
    * this would be replaced by requesting the appropriate data from the server.
    */
-  private getSortedData(data: TabelaItem[]): TabelaItem[] {
+  private getSortedData(data: McpItem[]): McpItem[] {
     if (!this.sort || !this.sort.active || this.sort.direction === '') {
       return data;
     }

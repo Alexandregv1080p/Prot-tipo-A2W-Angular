@@ -10,20 +10,58 @@
     flex-direction: column;
     margin-top: 20px;
 }
-button{
-    margin-top: 10px;
+.form-check{
+    width: 20%;
 }
-.buttons{
+button{
+    margin-top: 20px;
+}
+input[type="checkbox"].toggle + label{
+    position: relative;
     display: flex;
-    justify-content: flex-end;
+    align-items: center;
+    cursor: pointer;
 }
 input[type="checkbox"].toggle{
     opacity: 0;
     position: absolute;
+    left:-9000px;
+    top:-9000px;
 }
-input[type="checkbox"].toggle:checked + label::before{
+
+input[type="checkbox"].toggle+ label::before{
     content: "";
+    width: 10em;
+    height: 3em;
+    background-color: rgb(231, 216, 216);
+    border-radius: 1em;
+    margin-right: 1em;
 }
-input[type="checkbox"].toggle:checked + label{
-    color:red
+input[type="checkbox"].toggle+ label::after{
+    display: flex;
+    position: absolute;
+    content: "OFF";
+    color: white;
+    align-items: center;
+    justify-content: center;
+    width: 5em;
+    height: 2.5em;
+    background-color: rgb(216, 20, 20);
+    border-radius: 1em;
+    left: .25em;
+    transition: 200ms ease-in-out;
+}
+input[type="checkbox"].toggle:checked + label::after{
+    position: absolute;
+    content: "ATIVO";
+    color: white;
+    width: 5em;
+    height: 2.5em;
+    background-color: rgb(25, 158, 31);
+    border-radius: 1em;
+    left: 4.70em;
+    transition: 200ms ease-in-out;
+}
+input[type="checkbox"].toggle:focus + label::before{
+    outline:1px solid black
 }

@@ -1,0 +1,31 @@
+.cadastro{
+    margin: 20px;
+    background-color: #309D4E;
+    color: white;
+}
+table{
+    width: 100%;
+}
+th.mat-header-cell:first-of-type, td.mat-cell:first-of-type, td.mat-footer-cell:first-of-type {
+    padding-left: 45px;
+}
+.mat-elevation-z8 {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+th.mat-header-cell {
+    text-align: center;
+}
+.mat-header-cell {
+    font-size: 1.6em;
+}
+th{
+    background-color: #5fcf7f;
+    color: white;
+}
+.mat-table{    
+    border-radius: 8px;
+    overflow:hidden ;
+}
