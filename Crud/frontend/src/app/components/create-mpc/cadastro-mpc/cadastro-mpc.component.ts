@@ -28,7 +28,8 @@ export class CadastroMpcComponent implements OnInit {
   modcliente: Modcliente = {
     cliente: {},
     modulo: {},
-    quantidadeCliente: ''
+    quantidadeCliente: '',
+    id:null
   }
 
   ngOnInit(): void {

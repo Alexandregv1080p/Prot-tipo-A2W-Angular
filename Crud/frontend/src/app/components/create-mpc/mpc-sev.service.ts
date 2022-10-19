@@ -1,8 +1,8 @@
+import { Modcliente } from './mpc.model';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Injectable } from '@angular/core';
-import { Mpc } from './mpc.model';
 import { Modulo } from '../create-modulo/module.model';
 import { Cliente } from '../createCliente/cliente.model';
 
@@ -24,11 +24,11 @@ export class MpcSevService {
       verticalPosition:"top"
     })
   }
-  create(cliente:Mpc):Observable<Mpc>{
-    return this.http.post<Mpc>(this.baseUrl,cliente)
+  create(cliente:Modcliente):Observable<Modcliente>{
+    return this.http.post<Modcliente>(this.baseUrl,cliente)
   }
-  read(): Observable<Mpc[]> {
-    return this.http.get<Mpc[]>(this.baseUrl)
+  read(): Observable<Modcliente[]> {
+    return this.http.get<Modcliente[]>(this.baseUrl)
   }
   readModulos(): Observable<Modulo[]> {
     return this.http.get<Modulo[]>(this.modulosUrl)
@@ -44,12 +44,12 @@ export class MpcSevService {
     let url = `${this.baseUrl}/${id}`
     return this.http.get<any>(this.clientesUrl)
   }
-  update(cliente: Mpc):Observable<Mpc>{
+  update(cliente: Modcliente):Observable<Modcliente>{
     let url = `${this.baseUrl}/${cliente.id}`
-    return this.http.put<Mpc>(url,cliente)
+    return this.http.put<Modcliente>(url,cliente)
   }
-  delete(id: number):Observable<Mpc>{
+  delete(id: number):Observable<Modcliente>{
     let url = `${this.baseUrl}/${id}`
-    return this.http.delete<Mpc>(url)
+    return this.http.delete<Modcliente>(url)
   }
 }

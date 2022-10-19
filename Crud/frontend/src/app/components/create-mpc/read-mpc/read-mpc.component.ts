@@ -1,5 +1,5 @@
 import { Router } from '@angular/router';
-import { Mpc } from './../mpc.model';
+import { Modcliente } from './../mpc.model';
 import { Component, OnInit } from '@angular/core';
 import { MpcSevService } from '../mpc-sev.service';
 import { Modulo } from '../../create-modulo/module.model';
@@ -14,7 +14,7 @@ export class ReadMpcComponent implements OnInit {
 
   constructor(private mpcService: MpcSevService,private router:Router) { }
 
-  mpc: Mpc[]
+  mpc: Modcliente[]
   modulos: Modulo[]
   clientes: Cliente[]
   displayedColumns = ['id','nomeCliente','nomeModulo','status','action']

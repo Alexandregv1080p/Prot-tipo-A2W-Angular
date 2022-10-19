@@ -57,8 +57,9 @@ export class LoginComponent implements OnInit {
           break
         }
         else{
-          this.authService.showMensage('Usuario inválido')
           localStorage.clear();
+          this.authService.mostrarMenu.emit(false)
+          console.log(usuarios.email === a.email ? 'true' : 'false' )  
         }
       }
     }
