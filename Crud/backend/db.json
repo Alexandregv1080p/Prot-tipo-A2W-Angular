@@ -21,25 +21,19 @@
       "id": 4
     },
     {
-      "name": "Gabriel",
-      "status": true,
-      "description": "Sem descrição",
-      "id": 5
-    },
-    {
       "name": "dasd",
       "status": false,
       "description": "dsa",
       "id": 6
+    },
+    {
+      "name": "Alvaro",
+      "status": true,
+      "description": "Sem descrição",
+      "id": 7
     }
   ],
   "modulos": [
-    {
-      "name": "Módulo 1",
-      "status": false,
-      "description": "Módulo insersivo",
-      "id": 2
-    },
     {
       "name": "Módulo 2",
       "status": true,
@@ -87,34 +81,6 @@
       "data": "2022-10-18",
       "status": true,
       "id": 1
-    },
-    {
-      "clientes": {
-        "name": "José",
-        "status": true,
-        "description": "Sem descrição disponível",
-        "id": 3,
-        "modulosPCliente": []
-      },
-      "modulos": {
-        "name": "Módulo 1",
-        "status": false,
-        "description": "Módulo insersivo",
-        "id": 2
-      },
-      "quantidadeCliente": "12",
-      "id": 5
-    },
-    {
-      "clientes": {
-        "name": "Alvaro",
-        "status": true,
-        "description": "Cadastrado com sucesso",
-        "id": 2,
-        "modulosPCliente": []
-      },
-      "quantidadeCliente": "15",
-      "id": 6
     }
   ]
 }

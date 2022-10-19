@@ -7,11 +7,11 @@
             <mat-hint *ngIf="name.errors?.['required']">*Entre com seu nome completo</mat-hint>
         </mat-form-field>
         <mat-form-field appearance="outline" >
-            <input matInput placeholder="Senha" required [(ngModel)]="users.senha" name="senha" #senha="ngModel">
+            <input matInput placeholder="Senha" required [(ngModel)]="users.senha" minlength="8" name="senha" #senha="ngModel">
             <mat-hint *ngIf="senha.errors?.['required']">*Crie uma senha de até 8 digitos</mat-hint>
         </mat-form-field>
         <mat-form-field appearance="outline" >
-            <input matInput placeholder="Confirme a senha" name="senha">
+            <input matInput placeholder="Confirme a senha" [(ngModel)]="users.confirmSenha " minlength="8" name="confirmSenha">
         </mat-form-field>
         <mat-form-field appearance="outline"  >
             <input matInput placeholder="Email" required [(ngModel)]="users.email" name="email" #email="ngModel">

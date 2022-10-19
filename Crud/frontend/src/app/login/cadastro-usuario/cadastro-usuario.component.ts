@@ -16,6 +16,7 @@ export class CadastroUsuarioComponent implements OnInit {
   users:Usuario = {
     name:'',
     senha:'',
+    confirmSenha:'',
     email:''
   }
 
