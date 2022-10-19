@@ -3,6 +3,8 @@ import { Usuario } from './../users.module';
 import { LogServService } from './../log-serv.service';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { NavServiceService } from 'src/app/components/template/nav-service.service';
+import { HeaderServiceService } from 'src/app/components/template/header-service.service';
 
 @Component({
   selector: 'app-cadastro-usuario',
@@ -18,11 +20,17 @@ export class CadastroUsuarioComponent implements OnInit {
   }
 
   public formRegister !: FormGroup
-  constructor(private logServ: LogServService, private router: Router,private formBuild : FormBuilder) { }
+  constructor(private logServ: LogServService
+    , private router: Router
+    ,private formBuild : FormBuilder,
+    public nav: NavServiceService,
+    public head: HeaderServiceService
+    ) { }
 
 
   ngOnInit(): void {
-    
+    this.nav.hide();
+    this.head.hide();
   }
 
   cadastrarCliente():void{
