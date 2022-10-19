@@ -3,10 +3,11 @@
     <form class="form">
         <div class="input-group">
             <div class="content-1">
-                <select name="" id="">
-                    <option value="">Entre com o cliente</option>
-                    <option value="" [(ngModel)]="clientes.name" name="name">{{clientes.name}}</option>
-                </select>
+                <mat-select name="modulo" [(ngModel)]= "modcliente.cliente">
+                    <mat-option *ngFor="let c of clientes" [value]="c">
+                        {{ c.name }}
+                    </mat-option>
+                </mat-select>
                 <select name="" id="">
                     <option value="">Entre com o nome do módulo</option>
                     <option value=""></option>

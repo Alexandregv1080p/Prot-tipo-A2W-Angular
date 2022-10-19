@@ -1,5 +1,5 @@
+import { Modcliente } from './../mpc.model';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Mpc } from './../mpc.model';
 import { Component, OnInit } from '@angular/core';
 import { MpcSevService } from '../mpc-sev.service';
 import { Cliente } from '../../createCliente/cliente.model';
@@ -14,31 +14,32 @@ import { ClienteLogService } from '../../createCliente/cliente-log.service';
 })
 export class CadastroMpcComponent implements OnInit {
 
-  constructor(private clienteService:ClienteLogService,private route:ActivatedRoute,private mpcService: MpcSevService,private router:Router,private moduloService: ModuloLogService) { }
+  constructor(private clienteService:ClienteLogService
+    ,private route:ActivatedRoute
+    ,private mpcService: MpcSevService
+    ,private router:Router
+    ,private moduloService: ModuloLogService) { }
 
   
-  modulos: Modulo
+  modulos: Modulo[]
 
   clientes:Cliente[]
 
-  mpc : any
+  modcliente: Modcliente = {
+    cliente: {},
+    modulo: {},
+    quantidadeCliente: ''
+  }
 
   ngOnInit(): void {
     this.mpcService.readClientes().subscribe((data)=>{
       this.clientes = data
-      console.log(data)
+    })
+    this.moduloService.read().subscribe(modulo => {
+      this.modulos = modulo
     })
   }
   
-
-  cadastrarMpc():void{
-    this.mpcService.create(this.mpc).subscribe(()=>{
-      this.mpcService.showMensage('Mpc cadastrado com sucesso')
-      this.router.navigate(["mpc"])
-      this.router.navigate(["modulos-por-cliente"])
-    })
-    
-  }
   cancel():void{
     this.router.navigate(["modulos-por-cliente"])
   }

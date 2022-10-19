@@ -45,7 +45,7 @@ import { DelteModuloComponent } from './components/create-modulo/delte-modulo/de
 import { ReadMpcComponent } from './components/create-mpc/read-mpc/read-mpc.component';
 import { UpdateMpcComponent } from './components/create-mpc/update-mpc/update-mpc.component';
 import { DeleteMpcComponent } from './components/create-mpc/delete-mpc/delete-mpc.component';
-
+import { MatSelectModule } from '@angular/material/select';
 @NgModule({
   declarations: [
     AppComponent,
@@ -94,7 +94,7 @@ import { DeleteMpcComponent } from './components/create-mpc/delete-mpc/delete-mp
     MatSnackBarModule,
     HttpClientModule,
     ReactiveFormsModule,
-    
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

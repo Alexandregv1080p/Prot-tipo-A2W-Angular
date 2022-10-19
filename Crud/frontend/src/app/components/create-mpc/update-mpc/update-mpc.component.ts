@@ -1,5 +1,5 @@
 import { ActivatedRoute, Router } from '@angular/router';
-import { Mpc } from './../mpc.model';
+import { Modcliente } from './../mpc.model';
 import { MpcSevService } from './../mpc-sev.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UpdateMpcComponent implements OnInit {
 
-  mpc : Mpc
+  mpc : Modcliente
 
   constructor(private mpcService: MpcSevService,private route:ActivatedRoute, private router: Router) { }
 

@@ -4,23 +4,23 @@
         <div class="input-group">
             <div class="content-1">
                 <mat-form-field class="inputs" appearance="outline">
-                    <input matInput placeholder="Nome do cliente" [(ngModel)]="mpc.nomeCliente" name="nomeCliente">
+                    <input matInput placeholder="Nome do cliente" >
                 </mat-form-field>
                 <mat-form-field class="inputs" appearance="outline">
-                    <input matInput placeholder="Nome do módulo" [(ngModel)]="mpc.nomeModulo"  name="nomeModulo">
+                    <input matInput placeholder="Nome do módulo">
                 </mat-form-field>
             </div>
             <div class="content-2">
                 <mat-form-field appearance="outline">
-                    <input matInput placeholder="Quantidade" [(ngModel)]="mpc.quantidade"  name="quantidade">
+                    <input matInput placeholder="Quantidade">
                 </mat-form-field>
                 <mat-form-field class="inputs" appearance="outline">
-                    <input matInput placeholder="Data" type="date" [(ngModel)]="mpc.data" name="data">
+                    <input matInput placeholder="Data" type="date">
                 </mat-form-field>
             </div>
         </div>
         <div class="form-check form-switch">
-            <input class="toggle" type="checkbox" [(ngModel)]="mpc.status" name="status" id="check">
+            <input class="toggle" type="checkbox"id="check">
             <label class="label" for="check"></label>
         </div>  
     </form>
