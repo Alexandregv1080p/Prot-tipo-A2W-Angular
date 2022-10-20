@@ -1,3 +1,4 @@
+import { map, tap } from 'rxjs/operators';
 import { Cliente } from './../../createCliente/cliente.model';
 import { Modulo } from './../../create-modulo/module.model';
 import { Modcliente } from './../mpc.model';
@@ -26,32 +27,29 @@ export class CadastroMpcComponent implements OnInit {
 
     
   ngOnInit(): void {
-    this.mpcService.readClientes().subscribe(cliente=>{
-      this.clientes = cliente
-      this.mpcService.readModulos().subscribe(modulos =>{
-        this.modulos = modulos
-      })
-    })
     
   }
   modcliente: Modcliente = {
-    clientes:{},
-    modulos: {},
+    clientes:'Alvaro',
+    modulos: 'Módulo 1',
     quantidadeCliente: null,
-    id:null
   }
   
   cancel():void{
     this.router.navigate(["modulos-por-cliente"])
   }
   adicionarMod() : void {
-    this.mpcService.read().subscribe(res =>{
-      if(!res.find((item:any)  => item.modcliente.name == this.modcliente.clientes.name &&  item.modcliente.name == this.modcliente.modulos)){
-         this.mpcService.create(this.modcliente).subscribe(() => {
-           this.mpcService.showMensage('Módulo registrado com sucesso!')
-           this.router.navigate(["modulos-por-cliente"])
-         });
-       }
-     });
+    this.mpcService.readClientes().subscribe(cliente=>{
+      this.clientes = cliente
+      console.log(cliente)
+      this.mpcService.readModulos().subscribe(modulos =>{
+        this.modulos = modulos
+      })
+    })
+    this.mpcService.read().subscribe(()=>{
+      this.mpcService.create(this.modcliente).subscribe(()=>{
+        this.mpcService.showMensage("Cadastrado com sucesso!!")
+      })
+    })
  }
 }

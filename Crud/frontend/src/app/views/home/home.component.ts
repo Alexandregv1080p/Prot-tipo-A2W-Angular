@@ -17,7 +17,6 @@ export class HomeComponent implements OnInit {
     clientes: {},
     modulos: {},
     quantidadeCliente: 1,
-    id:null
   }
 
   pesquisa: string = ''

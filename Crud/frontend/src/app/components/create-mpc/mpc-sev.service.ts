@@ -24,14 +24,11 @@ export class MpcSevService {
       verticalPosition:"top"
     })
   }
-  create(cliente:Modcliente):Observable<Modcliente>{
-    return this.http.post<Modcliente>(this.baseUrl,this.clientesUrl)
+  create(mpc:Modcliente):Observable<Modcliente>{
+    return this.http.post<Modcliente>(this.baseUrl,mpc)
   }
   read(): Observable<Modcliente[]> {
     return this.http.get<Modcliente[]>(this.baseUrl)
-  }
-  readMpcTeste(clientes:Cliente,modulos:Modulo){
-    return this.http.get<Cliente>(this.clientesUrl)
   }
   readMpc(): Observable<Modcliente> {
     return this.http.get<Modcliente>(this.baseUrl)
@@ -41,10 +38,6 @@ export class MpcSevService {
   }
   readClientes(): Observable<Cliente[]> {
     return this.http.get<Cliente[]>(this.clientesUrl)
-  }
-  update(cliente: Modcliente):Observable<Modcliente>{
-    let url = `${this.baseUrl}/${cliente.id}`
-    return this.http.put<Modcliente>(url,cliente)
   }
   delete(id: number):Observable<Modcliente>{
     let url = `${this.baseUrl}/${id}`

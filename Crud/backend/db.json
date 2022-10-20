@@ -75,13 +75,10 @@
   ],
   "modcliente": [
     {
-      "clientes": "Rogério",
-      "description": "Sem descrição",
-      "status": true,
-      "modulos": "Módulo 1",
-      "quantidadeClientes": 12,
-      "id": 1,
-      "data": "30-10-2020"
+      "clientes":{},
+      "modulos": {},
+      "quantidadeCliente": null,
+      "id":null
     }
   ]
 }

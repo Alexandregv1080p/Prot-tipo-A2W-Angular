@@ -17,12 +17,6 @@ export class UpdateMpcComponent implements OnInit {
   ngOnInit(): void {
     
   }
-  updateCliente(){
-    this.mpcService.update(this.mpc).subscribe(()=>{
-      this.mpcService.showMensage('Cliente atualizado com sucesso')
-      this.router.navigate(["modulos-por-cliente"])
-    })
-  }
   cancel():void{
     this.router.navigate(["modulos-por-cliente"])
   }

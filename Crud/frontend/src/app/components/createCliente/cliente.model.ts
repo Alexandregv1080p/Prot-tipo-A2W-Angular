@@ -1,6 +1,6 @@
 export interface Cliente{
     id?: number
     name: string
-    status:boolean | null
+    status:boolean
     description?:string
 }
