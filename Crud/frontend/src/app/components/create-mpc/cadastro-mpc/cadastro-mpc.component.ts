@@ -24,12 +24,7 @@ export class CadastroMpcComponent implements OnInit {
 
     clientes!: Cliente []
 
-    modcliente: Modcliente = {
-      clientes:{},
-      modulos: {},
-      quantidadeCliente: null,
-      id:null
-    }
+    
   ngOnInit(): void {
     this.mpcService.readClientes().subscribe(cliente=>{
       this.clientes = cliente
@@ -38,6 +33,12 @@ export class CadastroMpcComponent implements OnInit {
       })
     })
     
+  }
+  modcliente: Modcliente = {
+    clientes:{},
+    modulos: {},
+    quantidadeCliente: null,
+    id:null
   }
   
   cancel():void{
