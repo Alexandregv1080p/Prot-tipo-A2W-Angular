@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, EventEmitter } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -11,7 +11,6 @@ import { NavComponent } from './components/template/nav/nav.component'
 import { MatSidenavModule} from '@angular/material/sidenav';
 import { MatListModule} from '@angular/material/list';
 import { HomeComponent } from './views/home/home.component';
-import { TabelaComponent } from './tabela/tabela.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
@@ -26,9 +25,19 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatCardModule } from '@angular/material/card';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { CreateModuloComponent } from './components/create-modulo/cadastrar-modulo/create-modulo.component';
-import {HttpClientModule} from '@angular/common/http'
-import { MatFormField } from '@angular/material/form-field';
-
+import {HttpClientModule} from '@angular/common/http';
+import { ReadModuloComponent } from './components/create-modulo/read-modulo/read-modulo.component';
+import { ForDirective } from './directives/for.directive';
+import { ReadClienteComponent } from './components/createCliente/read-cliente/read-cliente.component';
+import { CadastrClienteTabelaComponent } from './components/createCliente/cadastr-cliente-tabela/cadastr-cliente-tabela.component';
+import { TabelaCadastroModuloComponent } from './components/create-modulo/tabela-cadastro-modulo/tabela-cadastro-modulo.component';
+import { LoginComponent } from './login/login.component';
+import { CadastroUsuarioComponent } from './login/cadastro-usuario/cadastro-usuario.component'
+import { ReactiveFormsModule } from '@angular/forms';
+import { ModuloPorClienteComponent } from './views/modulo-por-cliente/modulo-por-cliente.component';
+import { CadastroMpcComponent } from './components/create-mpc/cadastro-mpc/cadastro-mpc.component';
+import { TabelaCadastroMpcComponent } from './components/create-mpc/tabela-cadastro-mpc/tabela-cadastro-mpc.component';
+import { McpComponent } from './views/home/mcp/mcp.component';
 
 @NgModule({
   declarations: [
@@ -36,12 +45,22 @@ import { MatFormField } from '@angular/material/form-field';
     HeaderComponent,
     NavComponent,
     HomeComponent,
-    TabelaComponent,
     ClienteComponent,
     PerfilComponent,
     ModulosComponent,
     CadastrarClienteComponent,
     CreateModuloComponent,
+    ReadModuloComponent,
+    ForDirective,
+    ReadClienteComponent,
+    CadastrClienteTabelaComponent,
+    TabelaCadastroModuloComponent,
+    LoginComponent,
+    CadastroUsuarioComponent,
+    ModuloPorClienteComponent,
+    CadastroMpcComponent,
+    TabelaCadastroMpcComponent,
+    McpComponent,
     
     
   ],
@@ -62,7 +81,7 @@ import { MatFormField } from '@angular/material/form-field';
     MatCardModule,
     MatSnackBarModule,
     HttpClientModule,
-    MatFormField
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -17,7 +17,7 @@
                 <div class="dropdown-content" *ngIf="isMenuOpened">
                     <a routerLink="cliente">Clientes</a>
                     <a routerLink="modulos">Módulos</a>
-                    <a>Módulo Cliente</a>
+                    <a routerLink="modulos-por-cliente">Módulo Cliente</a>
                 </div>
             </div>
             
@@ -35,7 +35,7 @@
                         </i>
                         Editar 
                     </a>
-                    <a>
+                    <a (click)="logout()">
                         <i class="material-icons v-middle">
                             exit_to_app
                         </i>
