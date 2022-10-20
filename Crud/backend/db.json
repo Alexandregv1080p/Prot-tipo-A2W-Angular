@@ -193,6 +193,24 @@
       "quantidadeModulo": "10",
       "data": "2022-10-30",
       "id": 8
+    },
+    {
+      "clientes": {
+        "name": "Alvaro",
+        "status": true,
+        "description": "Sem descrição",
+        "id": 7
+      },
+      "modulos": {
+        "name": "Módulo 12",
+        "status": true,
+        "description": "Criado no dia 20-10-2022",
+        "id": 2
+      },
+      "quantidadeCliente": "12",
+      "quantidadeModulo": "16",
+      "data": "",
+      "id": 9
     }
   ]
 }
