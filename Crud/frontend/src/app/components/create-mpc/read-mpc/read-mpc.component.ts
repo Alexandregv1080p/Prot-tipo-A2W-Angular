@@ -15,8 +15,6 @@ export class ReadMpcComponent implements OnInit {
   constructor(private mpcService: MpcSevService,private router:Router) { }
 
   mpc: Modcliente[]
-  modulos: Modulo[]
-  clientes: Cliente[]
   displayedColumns = ['id','nomeCliente','nomeModulo','status','action']
 
   ngOnInit(): void {

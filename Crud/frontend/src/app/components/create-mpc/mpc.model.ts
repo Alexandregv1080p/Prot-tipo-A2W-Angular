@@ -1,6 +1,6 @@
 export interface Modcliente{
     clientes : {}
     modulos : {}
-    quantidadeCliente: ''
+    quantidadeCliente:number
     id: null
   }

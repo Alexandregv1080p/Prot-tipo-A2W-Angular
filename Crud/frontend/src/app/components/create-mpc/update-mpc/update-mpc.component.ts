@@ -15,10 +15,7 @@ export class UpdateMpcComponent implements OnInit {
   constructor(private mpcService: MpcSevService,private route:ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
-    const id = this.route.snapshot.paramMap.get('id')
-    this.mpcService.readById(id).subscribe(mpc=>{
-      this.mpc = mpc
-    })
+    
   }
   updateCliente(){
     this.mpcService.update(this.mpc).subscribe(()=>{

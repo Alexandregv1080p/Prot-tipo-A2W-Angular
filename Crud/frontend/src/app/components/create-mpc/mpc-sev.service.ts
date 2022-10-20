@@ -11,7 +11,7 @@ import { Cliente } from '../createCliente/cliente.model';
 })
 export class MpcSevService {
 
-  baseUrl =   "http://localhost:3001/mpc"
+  baseUrl =   "http://localhost:3001/modcliente"
   modulosUrl = "http://localhost:3001/modulos"
   clientesUrl = "http://localhost:3001/clientes"
 
@@ -25,24 +25,22 @@ export class MpcSevService {
     })
   }
   create(cliente:Modcliente):Observable<Modcliente>{
-    return this.http.post<Modcliente>(this.baseUrl,cliente)
+    return this.http.post<Modcliente>(this.baseUrl,this.clientesUrl)
   }
-  read(): Observable<any[]> {
+  read(): Observable<Modcliente[]> {
     return this.http.get<Modcliente[]>(this.baseUrl)
   }
-  readModulos(): Observable<Modulo[]> {
+  readMpcTeste(clientes:Cliente,modulos:Modulo){
+    return this.http.get<Cliente>(this.clientesUrl)
+  }
+  readMpc(): Observable<Modcliente> {
+    return this.http.get<Modcliente>(this.baseUrl)
+  }
+  readModulos(): Observable<Modulo[]>{
     return this.http.get<Modulo[]>(this.modulosUrl)
   }
   readClientes(): Observable<Cliente[]> {
     return this.http.get<Cliente[]>(this.clientesUrl)
-  }
-    readById(id: string):Observable<any>{
-      let url = `${this.baseUrl}/${id}`
-      return this.http.get<any>(this.clientesUrl)
-    }
-  readByIdCliente(id: string):Observable<any>{
-    let url = `${this.baseUrl}/${id}`
-    return this.http.get<any>(this.clientesUrl)
   }
   update(cliente: Modcliente):Observable<Modcliente>{
     let url = `${this.baseUrl}/${cliente.id}`

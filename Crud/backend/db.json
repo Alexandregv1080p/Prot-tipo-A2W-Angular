@@ -73,14 +73,18 @@
       "id": 6
     }
   ],
-  "mpc": [
+  "modcliente": [
     {
-      "nomeCliente": "Alvaro",
-      "nomeModulo": "Módulo 1",
-      "quantidade": "5",
-      "data": "2022-10-18",
+      "clientes": "Rogério",
+      "description": "Sem descrição",
       "status": true,
-      "id": 1
+      "modulos": "Módulo 1",
+      "quantidadeClientes": 12,
+      "id": 1,
+      "data": "30-10-2020"
+    },
+    {
+      
     }
   ]
 }

@@ -28,8 +28,8 @@ export class ModuloLogService {
   create(modulo:Modulo):Observable<Modulo>{
     return this.http.post<Modulo>(this.baseUrl,modulo)
   }
-  read(): Observable<Modulo[]> {
-    return this.http.get<Modulo[]>(this.baseUrl)
+  read(): Observable<any>  {
+    return this.http.get<any>(this.baseUrl)
   }
   readById(id: string):Observable<Modulo>{
     let url = `${this.baseUrl}/${id}`
