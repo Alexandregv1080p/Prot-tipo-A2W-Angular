@@ -1,0 +1,23 @@
+<mat-card>
+    <mat-card-title>Alterar Cliente</mat-card-title>
+    <form class="form">
+        <mat-form-field appearance="outline">
+            <input matInput placeholder="Nome" [(ngModel)]="cliente.name" name="name" >
+            <mat-hint>*Entre com seu nome completo</mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline" >
+            <input matInput placeholder="Descrição" [(ngModel)]="cliente.description" name="description">
+        </mat-form-field>
+        <div class="form-check form-switch">
+            <input class="toggle"   [(ngModel)]="cliente.status" type="checkbox" name="status" id="check">
+            <label class="label" for="check"></label>
+        </div>
+        
+    </form>
+</mat-card>
+<button mat-raised-button class="salvar" (click)="updateCliente()" >
+    Atualizar
+</button>
+<button mat-raised-button class="cancelar" (click)="cancel()">
+    Cancelar
+</button>

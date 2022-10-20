@@ -1,28 +1,198 @@
 {
   "clientes": [
     {
-      "name": "Roberto",
+      "name": "Alvaro",
       "status": true,
-      "description": "Cadastrado em tal dia",
+      "description": "Cadastrado com sucesso",
+      "id": 2,
+      "modulosPCliente": []
+    },
+    {
+      "name": "José",
+      "status": true,
+      "description": "Sem descrição disponível",
+      "id": 3,
+      "modulosPCliente": []
+    },
+    {
+      "name": "Alves",
+      "status": false,
+      "description": "Sem descrição",
+      "id": 4
+    },
+    {
+      "name": "dasd",
+      "status": false,
+      "description": "dsa",
+      "id": 6
+    },
+    {
+      "name": "Alvaro",
+      "status": true,
+      "description": "Sem descrição",
+      "id": 7
+    }
+  ],
+  "modulos": [
+    {
+      "name": "Módulo 2",
+      "status": true,
+      "description": "",
       "id": 1
     },
     {
-      "name": "Cliente Teste2",
+      "name": "Módulo 12",
       "status": true,
-      "description": "Cadastrado",
+      "description": "Criado no dia 20-10-2022",
       "id": 2
+    }
+  ],
+  "usuarios": [
+    {
+      "name": "Alvaro",
+      "senha": "123456",
+      "email": "Alvaro@gmail.com",
+      "id": 1
     },
     {
-      "name": "Cliente Teste2",
-      "status": true,
-      "description": "Cadastrado",
+      "name": "Alexandre",
+      "senha": "1234",
+      "email": "alexandregv@gmail.com",
       "id": 3
     },
     {
-      "name": "Cliente Teste2",
-      "status": true,
-      "description": "Cadastrado",
+      "name": "Ana",
+      "senha": "123",
+      "email": "ana@hotmail.com",
       "id": 4
+    },
+    {
+      "name": "Roberto",
+      "senha": "123",
+      "email": "robs@gmail.com",
+      "id": 5
+    },
+    {
+      "name": "claudio",
+      "senha": "123456",
+      "email": "claudio@hotmail.com",
+      "id": 6
+    }
+  ],
+  "mpc": [
+    {
+      "clientes": {
+        "name": "José",
+        "status": true,
+        "description": "Sem descrição disponível",
+        "id": 3
+      },
+      "modulos": {
+        "name": "Módulo 2",
+        "status": true,
+        "description": "",
+        "id": 1
+      },
+      "quantidadeCliente": "12",
+      "id": 2
+    },
+    {
+      "clientes": {
+        "name": "Alves",
+        "status": false,
+        "description": "Sem descrição",
+        "id": 4
+      },
+      "modulos": {
+        "name": "Módulo 2",
+        "status": true,
+        "description": "",
+        "id": 1
+      },
+      "quantidadeCliente": "12",
+      "id": 3
+    },
+    {
+      "clientes": {
+        "name": "Roberto",
+        "status": true,
+        "description": "Sem descrição",
+        "id": 8
+      },
+      "modulos": {
+        "name": "Módulo 2",
+        "status": true,
+        "description": "",
+        "id": 1
+      },
+      "quantidadeCliente": "15",
+      "id": 4
+    },
+    {
+      "clientes": {
+        "name": "Alves",
+        "status": false,
+        "description": "Sem descrição",
+        "id": 4
+      },
+      "modulos": {
+        "name": "Módulo 2",
+        "status": true,
+        "description": "",
+        "id": 1
+      },
+      "quantidadeCliente": "12",
+      "id": 5
+    },
+    {
+      "clientes": {
+        "name": "Alves",
+        "status": false,
+        "description": "Sem descrição",
+        "id": 4
+      },
+      "modulos": {
+        "name": "Módulo 2",
+        "status": true,
+        "description": "",
+        "id": 1
+      },
+      "quantidadeCliente": "12",
+      "id": 6
+    },
+    {
+      "clientes": {
+        "name": "Alves",
+        "status": false,
+        "description": "Sem descrição",
+        "id": 4
+      },
+      "modulos": {
+        "name": "Módulo 2",
+        "status": true,
+        "description": "",
+        "id": 1
+      },
+      "quantidadeCliente": "15",
+      "id": 7
+    },
+    {
+      "clientes": {
+        "name": "dasd",
+        "status": false,
+        "description": "dsa",
+        "id": 6
+      },
+      "modulos": {
+        "name": "Módulo 2",
+        "status": true,
+        "description": "",
+        "id": 1
+      },
+      "quantidadeCliente": "5",
+      "quantidadeModulo": "10",
+      "data": "2022-10-30",
+      "id": 8
     }
   ]
 }

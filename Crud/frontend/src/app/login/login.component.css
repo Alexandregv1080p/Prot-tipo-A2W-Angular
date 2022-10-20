@@ -1,0 +1,44 @@
+*{
+    margin:0;
+    padding: 0;
+}
+.salvar{
+    margin-right: 10px;
+    background-color: green;
+}
+.cancelar:hover{
+    background-color: red;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.form-check{
+    width: 20%;
+}
+
+.mat-card { 
+    width: 19%;
+    margin-top: 400px;
+    margin: 200px auto;
+}
+.mat-card-title{
+    justify-content: center;
+}
+.mat-hint{
+    color: red  ;
+}
+.cadastro{
+    margin-top: 15px;
+}
+.background{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    margin-left: -20px;
+    margin-top: -20px;
+}
+.contenier{
+    display: flex;
+}
