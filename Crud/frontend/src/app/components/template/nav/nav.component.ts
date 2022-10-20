@@ -35,6 +35,7 @@ export class NavComponent implements OnInit {
   
   logout(){
     localStorage.clear();
+    sessionStorage.clear();
     this.logServ.logout();   
     this.router.navigate(["login"])
   }

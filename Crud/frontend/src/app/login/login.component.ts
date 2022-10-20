@@ -16,6 +16,8 @@ export class LoginComponent implements OnInit {
 
   usuarios : any 
 
+  usuarioLogado : any
+
   isAutenticado = false
 
   mostrarMenu: boolean = false
@@ -49,17 +51,16 @@ export class LoginComponent implements OnInit {
         if(usuarios.email == a.email && usuarios.senha == a.senha){
           this.authService.showMensage('Usuario logado!')
           localStorage.setItem("Está logado", "true")
-          this.isAutenticado = true
+          sessionStorage.setItem("email",a.email)
+          sessionStorage.setItem("nome",a.name)
+          sessionStorage.setItem("senha",a.senha)
           this.nav.show()
           this.head.show()
-          console.log(a)
           this.router.navigate([""]) 
           break
         }
         else{
-          localStorage.clear();
-          this.authService.mostrarMenu.emit(false)
-          console.log(usuarios.email === a.email ? 'true' : 'false' )  
+          this.authService.showMensage('Usuario inválido!')  
         }
       }
     }

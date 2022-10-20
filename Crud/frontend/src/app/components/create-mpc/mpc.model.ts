@@ -1,6 +1,8 @@
 export interface Modcliente{
-    clientes : {}
-    modulos : {}
-    quantidadeCliente: ''
+    clientes :any
+    modulos : any
+    quantidadeCliente: number
+    quantidadeModulo: number
+    data:string
     id: null
   }

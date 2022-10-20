@@ -26,8 +26,13 @@
                     <input matInput  placeholder="Ex. 12" name= "quantidadeCliente"[(ngModel)]= "modcliente.quantidadeCliente">
                     <span matSuffix>un</span>
                   </mat-form-field>
+                  <mat-form-field>
+                    <mat-label>Quantidade Módulos</mat-label>
+                    <input matInput  placeholder="Ex. 12" name= "quantidadeModulo"[(ngModel)]= "modcliente.quantidadeModulo">
+                    <span matSuffix>un</span>
+                  </mat-form-field>
                 <mat-form-field class="inputs" appearance="outline">
-                    <input matInput placeholder="Data" type="date">
+                    <input matInput placeholder="Data" name="data" [(ngModel)]="modcliente.data" type="date">
                 </mat-form-field>
             </div>
             

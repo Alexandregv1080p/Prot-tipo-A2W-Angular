@@ -27,7 +27,9 @@ export class CadastroMpcComponent implements OnInit {
     modcliente: Modcliente = {
       clientes:{},
       modulos: {},
-      quantidadeCliente: '',
+      quantidadeCliente: null,
+      quantidadeModulo:null,
+      data:'',
       id:null
     }
 
@@ -51,7 +53,7 @@ export class CadastroMpcComponent implements OnInit {
   }
   adicionarMod() : void {
     this.mpcService.read().subscribe(res =>{
-       if(!res.find((item:any)  => item.modcliente.name == this.modcliente.clientes &&  item.modcliente.name == this.modcliente.modulos)){
+        {
          this.mpcService.create(this.modcliente).subscribe(() => {
            this.mpcService.showMensage('Módulo registrado com sucesso!')
            this.router.navigate(["modulos-por-cliente"])

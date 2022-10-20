@@ -1,9 +1,14 @@
 .salvar{
     margin-right: 10px;
+    
+}
+.salvar:hover{
     background-color: green;
+    color:white
 }
 .cancelar:hover{
     background-color: red;
+    color: white;
 }
 .form{
     display: flex;

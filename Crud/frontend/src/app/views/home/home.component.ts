@@ -16,7 +16,9 @@ export class HomeComponent implements OnInit {
   modcliente2: Modcliente = {
     clientes: {},
     modulos: {},
-    quantidadeCliente: '',
+    quantidadeCliente: 1,
+    quantidadeModulo:1,
+    data:'',
     id:null
   }
 

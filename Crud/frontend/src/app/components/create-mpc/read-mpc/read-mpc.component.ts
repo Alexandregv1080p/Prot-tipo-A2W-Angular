@@ -17,7 +17,7 @@ export class ReadMpcComponent implements OnInit {
   mpc: Modcliente[]
   modulos: Modulo[]
   clientes: Cliente[]
-  displayedColumns = ['id','nomeCliente','nomeModulo','status','action']
+  displayedColumns = ['id','clientes','modulos','status']
 
   ngOnInit(): void {
     this.mpcService.read().subscribe(mpc =>{
