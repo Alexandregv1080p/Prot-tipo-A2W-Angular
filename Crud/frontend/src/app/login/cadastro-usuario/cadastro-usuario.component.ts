@@ -39,7 +39,6 @@ export class CadastroUsuarioComponent implements OnInit {
       this.logServ.showMensage('Usuário cadastrado com sucesso')
       this.router.navigate(["login"])
     })
-    
   }
   cancel():void{
     this.router.navigate(["login"])

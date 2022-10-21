@@ -6,7 +6,7 @@
             <mat-hint>*Entre com seu nome completo</mat-hint>
         </mat-form-field>
         <mat-form-field appearance="outline" >
-            <input matInput placeholder="Email" [(ngModel)]="email" name="description">
+            <input matInput placeholder="Email" [(ngModel)]="email" name="email">
         </mat-form-field>
         <span>Alterar senha?</span>
         <div class="senha-content">
@@ -19,7 +19,7 @@
         </div>
     </form>
 </mat-card>
-<button mat-raised-button class="salvar" (click)="updateCliente()">
+<button mat-raised-button class="salvar" (click)="updateUsuario()">
     Salvar
 </button>
 <button mat-raised-button class="cancelar" >

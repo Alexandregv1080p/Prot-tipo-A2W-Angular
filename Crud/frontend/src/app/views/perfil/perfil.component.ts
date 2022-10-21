@@ -1,5 +1,6 @@
+import { Usuario } from './../../login/users.module';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { PerfilService } from './perfil.service';
 
 @Component({
@@ -12,21 +13,32 @@ export class PerfilComponent implements OnInit {
   nome = sessionStorage.getItem('nome')
   email = sessionStorage.getItem('email')
   senha = sessionStorage.getItem('senha')
+  id = sessionStorage.getItem('id')
+  
+  
 
-  usuario: any
+  usuario: Usuario={
+    name: '',
+    email:'',
+    senha:'',
+    confirmSenha:''
+  }
  
 
-  constructor(private perfilService:PerfilService,private router:Router) { }
+  constructor(private perfilService:PerfilService,private router:Router,private route:ActivatedRoute) { }
 
   ngOnInit(): void {
-    console.log(this.nome)
-    console.log(this.email)
-    console.log(this.senha)
+    this.perfilService.read().subscribe(usuario=>{
+      this.usuario = usuario
+    })
+    console.log(this.usuario)
+    
   }
-  updateCliente(){
+  updateUsuario(){
+    
     this.perfilService.update(this.usuario).subscribe(()=>{
       this.perfilService.showMensage('Usuario atualizado com sucesso')
-      this.router.navigate(["cliente"])
+      
     })
   }
 

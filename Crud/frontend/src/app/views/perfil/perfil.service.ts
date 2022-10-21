@@ -13,8 +13,8 @@ export class PerfilService {
   baseUrl = "http://localhost:3001/usuarios"
 
   update(usuario: Usuario):Observable<Usuario>{
-    let url = `${this.baseUrl}/${usuario.name}`
-    return this.http.put<Usuario>(url,usuario)
+    let url = `${this.baseUrl}/${usuario.id}`
+    return this.http.put<Usuario>(this.baseUrl,usuario)
   }
   showMensage(msg: string):void{
     this.snackBar.open(msg,'Fechar',{
@@ -22,5 +22,12 @@ export class PerfilService {
       horizontalPosition:"right",
       verticalPosition:"top"
     })
+  }
+  readById(id: string):Observable<Usuario>{
+    let url = `${this.baseUrl}/${id}`
+    return this.http.get<Usuario>(this.baseUrl)
+  }
+  read(): Observable<Usuario> {
+    return this.http.get<Usuario>(this.baseUrl)
   }
 }

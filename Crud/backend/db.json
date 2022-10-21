@@ -57,6 +57,7 @@
     {
       "name": "Alexandre",
       "senha": "1234",
+      "confirmSenha": "1234",
       "email": "alexandregv@gmail.com",
       "id": 3
     },
