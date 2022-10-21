@@ -78,108 +78,10 @@
       "senha": "123456",
       "email": "claudio@hotmail.com",
       "id": 6
-    },
-    {
-      "name": "alexandre",
-      "senha": "123456",
-      "confirmSenha": "1234",
-      "email": "ale",
-      "id": 7
-    },
-    {
-      "name": "alexandre",
-      "senha": "123456",
-      "confirmSenha": "1234",
-      "email": "ale",
-      "id": 8
-    },
-    {
-      "name": "das",
-      "senha": "dasdsadas",
-      "confirmSenha": "assdadas",
-      "email": "adsadf",
-      "id": 9
-    },
-    {
-      "name": "dsa",
-      "senha": "dasdsaa",
-      "confirmSenha": "dasdas",
-      "email": "das",
-      "id": 10
-    },
-    {
-      "name": "fafas",
-      "senha": "dadasasdadas",
-      "confirmSenha": "adasdasdas",
-      "email": "asd",
-      "id": 11
     }
+    
   ],
   "mpc": [
-    {
-      "clientes": {
-        "name": "José",
-        "status": true,
-        "description": "Sem descrição disponível",
-        "id": 3
-      },
-      "modulos": {
-        "name": "Módulo 2",
-        "status": true,
-        "description": "",
-        "id": 1
-      },
-      "quantidadeCliente": "12",
-      "id": 2
-    },
-    {
-      "clientes": {
-        "name": "Alves",
-        "status": false,
-        "description": "Sem descrição",
-        "id": 4
-      },
-      "modulos": {
-        "name": "Módulo 2",
-        "status": true,
-        "description": "",
-        "id": 1
-      },
-      "quantidadeCliente": "12",
-      "id": 3
-    },
-    {
-      "clientes": {
-        "name": "Roberto",
-        "status": true,
-        "description": "Sem descrição",
-        "id": 8
-      },
-      "modulos": {
-        "name": "Módulo 2",
-        "status": true,
-        "description": "",
-        "id": 1
-      },
-      "quantidadeCliente": "15",
-      "id": 4
-    },
-    {
-      "clientes": {
-        "name": "Alves",
-        "status": false,
-        "description": "Sem descrição",
-        "id": 4
-      },
-      "modulos": {
-        "name": "Módulo 2",
-        "status": true,
-        "description": "",
-        "id": 1
-      },
-      "quantidadeCliente": "12",
-      "id": 5
-    },
     {
       "clientes": {
         "name": "Alves",

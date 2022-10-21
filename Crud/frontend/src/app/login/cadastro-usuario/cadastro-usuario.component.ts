@@ -13,6 +13,8 @@ import { HeaderServiceService } from 'src/app/components/template/header-service
 })
 export class CadastroUsuarioComponent implements OnInit {
 
+  cadastroForm : any = FormBuilder
+
   users:Usuario = {
     name:'',
     senha:'',
@@ -32,13 +34,21 @@ export class CadastroUsuarioComponent implements OnInit {
   ngOnInit(): void {
     this.nav.hide();
     this.head.hide();
+    this.cadastroForm = this.formBuild.group({
+      name:['',Validators.required],
+      email:['',Validators.required],
+      senha:['',Validators.required],
+      confirmSenha:['',Validators.required]
+  })
   }
 
   cadastrarCliente():void{
-    this.logServ.create(this.users).subscribe(()=>{
+    console.log(this.cadastroForm)
+    this.logServ.create(this.cadastroForm.getRawValue()).subscribe(()=>{
       this.logServ.showMensage('Usuário cadastrado com sucesso')
       this.router.navigate(["login"])
     })
+    JSON.stringify(this.cadastroForm.getRawValue())
   }
   cancel():void{
     this.router.navigate(["login"])

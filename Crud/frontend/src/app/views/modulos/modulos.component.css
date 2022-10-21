@@ -1,5 +1,8 @@
 .cadastro{
     margin: 20px;
+}
+.cadastro:hover{
+    margin: 20px;
     background-color: #309D4E;
     color: white;
 }

@@ -14,10 +14,13 @@ export class HeaderComponent implements OnInit {
 
   mostrarMenu : boolean = false
 
-  constructor(private http: HttpClient,public logServ: LogServService,private router: Router,public head:HeaderServiceService) { }
+  constructor(public logServ: LogServService,private router: Router,public head:HeaderServiceService) { }
+
+  nome = sessionStorage.getItem('nome')
 
   ngOnInit(): void{
     this.head.show();
+    console.log(this.nome)
   }
   logout(){
     localStorage.clear();

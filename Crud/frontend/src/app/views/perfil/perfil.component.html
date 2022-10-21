@@ -2,13 +2,14 @@
     <mat-card-title>Alterar dados do Usuário</mat-card-title>
     <form class="form">
         <mat-form-field appearance="outline">
-            <input matInput placeholder="Nome" [(ngModel)]="nome" name="name">
-            <mat-hint>*Entre com seu nome completo</mat-hint>
+            <input matInput placeholder="Nome" [(ngModel)]="nome" disabled name="name">
+            <mat-hint>*Nome do usuário</mat-hint>
         </mat-form-field>
         <mat-form-field appearance="outline" >
-            <input matInput placeholder="Email" [(ngModel)]="email" name="email">
+            <input matInput placeholder="Email" [(ngModel)]="email" disabled name="email">
+            <mat-hint>*Email do usuário</mat-hint>
         </mat-form-field>
-        <span>Alterar senha?</span>
+        <span style="margin-top: 10px;">Alterar senha?</span>
         <div class="senha-content">
             <mat-form-field appearance="outline"  class="senha" >
                 <input matInput placeholder="Email"[(ngModel)]="senha" name="description">

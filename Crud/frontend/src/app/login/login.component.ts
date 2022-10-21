@@ -57,7 +57,7 @@ export class LoginComponent implements OnInit {
           sessionStorage.setItem("id",a.id)
           this.nav.show()
           this.head.show()
-          this.router.navigate([""]) 
+          this.router.navigate([""])
           break
         }
         else{

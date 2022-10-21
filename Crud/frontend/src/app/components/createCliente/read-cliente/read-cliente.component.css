@@ -17,7 +17,7 @@ th.mat-header-cell {
     font-size: 1.6em;
 }
 th{
-    background-color: #5fcf7f;
+    background-color: #4d99ad;
     color: white;
 }
 .mat-table{    
@@ -27,6 +27,7 @@ th{
 .editar{
     color: #5fcf7f;
 }
+
 .deletar{
     color:crimson
 }

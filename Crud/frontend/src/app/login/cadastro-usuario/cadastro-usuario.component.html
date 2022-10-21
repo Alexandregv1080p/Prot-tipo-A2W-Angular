@@ -1,25 +1,25 @@
 <img src="assets/imgs/a2w-login 1.png" class="background">
 <mat-card>
     <mat-card-title style="display:flex; text-align: center;">Ensira os dados logo abaixo</mat-card-title>
-    <form class="form" #loginForm="ngForm" (ngSubmit)="cadastrarCliente()">
+    <form class="form" [formGroup]="cadastroForm" (ngSubmit)="cadastrarCliente()">
         <mat-form-field appearance="outline">
-            <input matInput placeholder="Nome" required [(ngModel)]="users.name" minlength="2" name="name" #name="ngModel">
-            <mat-hint *ngIf="name.errors?.['required']">*Entre com seu nome completo</mat-hint>
+            <input matInput placeholder="Nome" required formControlName="name" minlength="2">
+            <mat-hint *ngIf="cadastroForm.get('name').errors?.['required']">*Entre com seu nome completo</mat-hint>
         </mat-form-field>
         <mat-form-field appearance="outline">
-            <input matInput placeholder="Senha" required [(ngModel)]="users.senha" minlength="4" name="senha" #senha="ngModel" required>
-            <mat-hint *ngIf="senha.errors?.['required']">*Crie uma senha como 4 digitos no mínimo</mat-hint>
+            <input matInput placeholder="Senha" required formControlName="senha" minlength="4" required>
+            <mat-hint *ngIf="cadastroForm.get('senha').errors?.['required']">*Crie uma senha como 4 digitos no mínimo</mat-hint>
         </mat-form-field>
         <mat-form-field appearance="outline">
-            <input matInput placeholder="Confirme a senha" [(ngModel)]="users.confirmSenha " name="confirmSenha" #confirmSenha="ngModel">
-            <span *ngIf="(confirmSenha.touched && loginForm.submitted) && confirmSenha.errors?.['required']"></span>
-            <mat-hint *ngIf="(confirmSenha.touched || loginForm.submitted) && users.senha !== users.confirmSenha">As senhas precisam estar iguais</mat-hint>
+            <input matInput placeholder="Confirme a senha" formControlName="confirmSenha" required>
+            <span></span>
+            <mat-hint>As senhas precisam estar iguais</mat-hint>
         </mat-form-field>
         <mat-form-field appearance="outline">
-            <input matInput placeholder="Email" required [(ngModel)]="users.email" name="email" #email="ngModel">
-            <mat-hint *ngIf="email.errors?.['required']">*Entre com um email para contato</mat-hint>
+            <input matInput placeholder="Email" required formControlName="email">
+            <mat-hint *ngIf="cadastroForm.get('email').errors?.['required']">*Entre com um email para contato</mat-hint>
         </mat-form-field>
-        <button mat-raised-button class="cadastro"  [disabled]="!loginForm.form.valid">
+        <button mat-raised-button class="cadastro"  [disabled]="!cadastroForm.valid">
             Cadastrar
         </button>
         <button mat-raised-button class="cadastro" (click)="cancel()">

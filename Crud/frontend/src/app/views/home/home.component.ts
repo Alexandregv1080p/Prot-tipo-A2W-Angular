@@ -9,7 +9,7 @@ import { Modcliente } from 'src/app/components/create-mpc/mpc.model';
 })
 export class HomeComponent implements OnInit {
 
-  displayedColumns = ['cliente', 'modulo', 'quantidadeCliente', 'quantidadeModulo', 'usuarios', 'action']
+  
 
   modcliente!: Modcliente[]
 
@@ -21,6 +21,8 @@ export class HomeComponent implements OnInit {
     data:'',
     id:null
   }
+  
+  displayedColumns = ['clientes', 'modulos', 'quantidadeCliente', 'quantidadeModulo']
 
   pesquisa: string = ''
   constructor(private mpcService: MpcSevService) { }
