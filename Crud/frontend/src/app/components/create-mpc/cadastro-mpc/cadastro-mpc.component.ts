@@ -38,7 +38,7 @@ export class CadastroMpcComponent implements OnInit {
 
   ngOnInit(): void {
     this.mpcService.readClientes().subscribe(cliente=>{
-      this.clientes = cliente
+      this.clientes = cliente.filter(s => s.status === true);
       console.log(this.clientes)
     })
     this.moduloService.read().subscribe(modulos => {
@@ -52,7 +52,7 @@ export class CadastroMpcComponent implements OnInit {
     this.router.navigate(["modulos-por-cliente"])
   }
   adicionarMod() : void {
-    this.mpcService.read().subscribe(res =>{
+    this.mpcService.read().subscribe(() =>{
         {
          this.mpcService.create(this.modcliente).subscribe(() => {
            this.mpcService.showMensage('Módulo registrado com sucesso!')

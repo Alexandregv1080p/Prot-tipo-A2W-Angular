@@ -22,10 +22,18 @@ export class HomeComponent implements OnInit {
     id:null
   }
   
-  displayedColumns = ['clientes', 'modulos', 'quantidadeCliente', 'quantidadeModulo']
+  displayedColumns = ['clientes', 'modulos', 'quantidadeCliente', 'quantidadeModulo','usuarios']
 
   pesquisa: string = ''
   constructor(private mpcService: MpcSevService) { }
+
+  
+
+  ngOnInit(): void {
+    this.mpcService.read().subscribe(modcliente => {
+      this.modcliente = modcliente
+    })
+  }
 
   Resultado(v1:number, v2:number) {
     let result:any
@@ -42,11 +50,4 @@ export class HomeComponent implements OnInit {
     else
       return 0
   }
-
-  ngOnInit(): void {
-    this.mpcService.read().subscribe(modcliente => {
-      this.modcliente = modcliente
-    })
-  }
-
 }

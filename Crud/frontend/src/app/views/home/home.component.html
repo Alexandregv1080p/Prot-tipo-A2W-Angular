@@ -31,6 +31,15 @@
         <th mat-header-cell *matHeaderCellDef >Quantidade de módulos</th>
         <td mat-cell *matCellDef="let row">Ativo: {{row.quantidadeModulo}}</td>
       </ng-container>
+      <ng-container matColumnDef="usuarios">
+        <th mat-header-cell *matHeaderCellDef>Quantidade a mais</th>
+        <td mat-cell *matCellDef="let row">
+          <div [ngSwitch]="menor(row.quantidadeCliente, row.quantidadeModulo)">
+            <div *ngSwitchCase="1" style="color: green">{{Resultado(row.quantidadeCliente, row.quantidadeModulo)}}</div>
+            <div *ngSwitchCase="0" style="color: red;">{{Resultado(row.quantidadeCliente, row.quantidadeModulo)}}</div>               
+          </div>
+        </td>
+    </ng-container>
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>

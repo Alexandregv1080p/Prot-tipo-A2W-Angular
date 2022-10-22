@@ -84,38 +84,6 @@
   "mpc": [
     {
       "clientes": {
-        "name": "Alves",
-        "status": false,
-        "description": "Sem descrição",
-        "id": 4
-      },
-      "modulos": {
-        "name": "Módulo 2",
-        "status": true,
-        "description": "",
-        "id": 1
-      },
-      "quantidadeCliente": "12",
-      "id": 6
-    },
-    {
-      "clientes": {
-        "name": "Alves",
-        "status": false,
-        "description": "Sem descrição",
-        "id": 4
-      },
-      "modulos": {
-        "name": "Módulo 2",
-        "status": true,
-        "description": "",
-        "id": 1
-      },
-      "quantidadeCliente": "15",
-      "id": 7
-    },
-    {
-      "clientes": {
         "name": "dasd",
         "status": false,
         "description": "dsa",
