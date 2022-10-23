@@ -12,6 +12,8 @@ export class ReadClienteComponent implements OnInit {
 
   clientes: Cliente[]
   displayedColumns = ['id','name','status','action']
+  name : any
+
 
   constructor(private clienteService: ClienteLogService,private router: Router) { }
 
@@ -27,4 +29,13 @@ export class ReadClienteComponent implements OnInit {
   navigateToClientDelete(id:number){
     this.router.navigate([`cliente/deletecliente/${id}`])
   }
+  search(){
+    if(this.name == ""){
+    this.ngOnInit()
+  }else{
+    this.clientes = this.clientes.filter(res=>{
+      return res.name.toLocaleLowerCase().match(this.name.toLocaleLowerCase())
+    })
+  }
+}
 }

@@ -14,6 +14,7 @@ export class ClienteComponent implements OnInit {
 
   clientes: Cliente[]
   displayedColumns = ['id','name','status','action']
+  name: any
 
   ngOnInit(): void {
     this.clienteService.read().subscribe(clientes =>{

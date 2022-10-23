@@ -1,3 +1,7 @@
+<input type="text" name="name" [(ngModel)]="name" class="searchBar" (ngModelChange)="search()"
+    placeholder="Entre com o nome do cliente">
+    <i class="material-icons search-icon">search</i>
+
 <div class="mat-elevation-z8">
     <table mat-table matSort [dataSource]="clientes" >
       <!-- Id Column -->

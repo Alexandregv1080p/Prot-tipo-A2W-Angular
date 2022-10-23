@@ -18,7 +18,7 @@ export class ReadMpcComponent implements OnInit {
   modulos: Modulo[]
   clientes: Cliente[]
   displayedColumns = ['id','clientes','modulos','status']
-
+  name:any
   ngOnInit(): void {
     this.mpcService.read().subscribe(mpc =>{
       this.mpc = mpc
@@ -32,5 +32,13 @@ export class ReadMpcComponent implements OnInit {
   navigateToMpcDelete(id:number){
     this.router.navigate([`modulos-por-cliente/delete-mpc/${id}`])
   }
-
+  search(){
+    if(this.name == ""){
+    this.ngOnInit()
+  }else{
+    this.clientes = this.clientes.filter(res=>{
+      return res.name.toLocaleLowerCase().match(this.name.toLocaleLowerCase())
+    })
+  }
+}
 }

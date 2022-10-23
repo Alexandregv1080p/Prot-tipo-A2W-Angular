@@ -11,7 +11,7 @@ import { ModuloLogService } from '../modulo-log.service';
 export class ReadModuloComponent implements OnInit {
 
   modulos: Modulo[] 
-
+  name: any
   displayedColumns = ['id','name','status','action']
 
   constructor(private moduloService : ModuloLogService,private router:Router) { }
@@ -28,5 +28,14 @@ export class ReadModuloComponent implements OnInit {
   navigateToModuloDelete(id:number){
     this.router.navigate([`create-modulo/delete-modulo/${id}`])
   }
+  search(){
+    if(this.name == ""){
+    this.ngOnInit()
+  }else{
+    this.modulos = this.modulos.filter(res=>{
+      return res.name.toLocaleLowerCase().match(this.name.toLocaleLowerCase())
+    })
+  }
+}
 
 }

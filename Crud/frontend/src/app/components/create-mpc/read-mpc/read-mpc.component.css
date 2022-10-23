@@ -30,3 +30,15 @@ th{
 .deletar{
     color:crimson
 }
+.searchBar{
+    width: 28%;
+    font-size: 1.1rem;
+    margin: 20px;
+    left:440px;
+    padding: 5px;
+}
+.search-icon{
+    position: relative;
+    left: -3%;
+    top: 4px;
+}
