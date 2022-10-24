@@ -6,10 +6,12 @@
                 <mat-form-field appearance="outline">
                     <input matInput placeholder="Email" autofocus formControlName="email" >
                     <mat-hint *ngIf="loginForm.get('email').errors?.['required']">*Entre com seu nome completo</mat-hint>
+                    <i class="material-icons">perm_identity</i>
                 </mat-form-field>
                 <mat-form-field appearance="outline" >
-                    <input matInput placeholder="Senha" formControlName="senha">
+                    <input type="password" [type]="hide ?'password' : 'text' " matInput placeholder="Senha" formControlName="senha">
                     <mat-hint *ngIf="loginForm.get('senha').errors?.['required']">*Ensira a senha porfavor</mat-hint>
+                    <a><i class="material-icons" matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</i></a>
                 </mat-form-field>
                 <button  type="submit" mat-raised-button [disabled]="!loginForm.valid" (click)="loginProces(loginForm.value)" class="cadastro">
                     Login

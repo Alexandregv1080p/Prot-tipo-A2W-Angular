@@ -42,3 +42,9 @@
 .contenier{
     display: flex;
 }
+.material-icons{
+    position: absolute;
+    left: 300px;
+    bottom: 15px;  
+    opacity: 0.5;
+}
