@@ -3,6 +3,7 @@ export interface Modcliente{
     modulos : any
     quantidadeCliente: number
     quantidadeModulo: number
+    status:boolean
     data:string
     id: null
   }

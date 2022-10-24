@@ -30,6 +30,7 @@ export class CadastroMpcComponent implements OnInit {
       quantidadeCliente: null,
       quantidadeModulo:null,
       data:'',
+      status:false,
       id:null
     }
 
@@ -42,7 +43,7 @@ export class CadastroMpcComponent implements OnInit {
       console.log(this.clientes)
     })
     this.moduloService.read().subscribe(modulos => {
-      this.modulos = modulos
+      this.modulos = modulos.filter(s => s.status === true )
       console.log(this.modulos)
     })
     

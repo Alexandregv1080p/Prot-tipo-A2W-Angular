@@ -18,6 +18,7 @@ export class HomeComponent implements OnInit {
     modulos: {},
     quantidadeCliente: 1,
     quantidadeModulo:1,
+    status:false,
     data:'',
     id:null
   }
@@ -37,10 +38,13 @@ export class HomeComponent implements OnInit {
 
   Resultado(v1:number, v2:number) {
     let result:any
-    console.log(result)
+    
       if ( v1 < v2 ||  v1 == v2 || v1 > v2)
       {
         result = (v2 - v1)
+        if(Math.sign(result) == -1){
+          result = Math.abs(result)
+        }
         return result
       }
   }

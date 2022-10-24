@@ -29,6 +29,7 @@ export class CreateModuloComponent implements OnInit {
     })
     
   }
+  
   cancel():void{
     this.router.navigate(["modulos"])
   }
