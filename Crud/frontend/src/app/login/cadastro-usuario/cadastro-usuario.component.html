@@ -5,19 +5,22 @@
         <mat-form-field appearance="outline">
             <input matInput placeholder="Nome" required formControlName="name" minlength="2">
             <mat-hint *ngIf="cadastroForm.get('name').errors?.['required']">*Entre com seu nome completo</mat-hint>
+            <i class="material-icons name">perm_identity</i>
         </mat-form-field>
         <mat-form-field appearance="outline">
-            <input matInput placeholder="Senha" required formControlName="senha" minlength="4" required>
+            <input matInput type="password" [type]="hide ?'password' : 'text' " placeholder="Senha" required formControlName="senha" minlength="4" required>
             <mat-hint *ngIf="cadastroForm.get('senha').errors?.['required']">*Crie uma senha como 4 digitos no mínimo</mat-hint>
+            <i class="material-icons" matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</i>
         </mat-form-field>
         <mat-form-field appearance="outline">
-            <input matInput placeholder="Confirme a senha" formControlName="confirmSenha" required>
-            <span></span>
+            <input type="password" [type]="hide ?'password' : 'text' " matInput placeholder="Confirme a senha" formControlName="confirmSenha" required>
+            <i class="material-icons" matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</i>
             <mat-hint>As senhas precisam estar iguais</mat-hint>
         </mat-form-field>
         <mat-form-field appearance="outline">
             <input matInput placeholder="Email" required formControlName="email">
             <mat-hint *ngIf="cadastroForm.get('email').errors?.['required']">*Entre com um email para contato</mat-hint>
+            <i class="material-icons email">mail_outline</i>
         </mat-form-field>
         <button mat-raised-button class="cadastro"  [disabled]="!cadastroForm.valid">
             Cadastrar

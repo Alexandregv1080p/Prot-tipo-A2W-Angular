@@ -1,13 +1,6 @@
 {
   "clientes": [
     {
-      "name": "Alvaro",
-      "status": true,
-      "description": "Cadastrado com sucesso",
-      "id": 2,
-      "modulosPCliente": []
-    },
-    {
       "name": "José",
       "status": true,
       "description": "Sem descrição disponível",
@@ -19,12 +12,6 @@
       "status": false,
       "description": "Sem descrição",
       "id": 4
-    },
-    {
-      "name": "dasd",
-      "status": false,
-      "description": "dsa",
-      "id": 6
     },
     {
       "name": "Alvaro",
@@ -79,7 +66,6 @@
       "email": "claudio@hotmail.com",
       "id": 6
     }
-    
   ],
   "mpc": [
     {

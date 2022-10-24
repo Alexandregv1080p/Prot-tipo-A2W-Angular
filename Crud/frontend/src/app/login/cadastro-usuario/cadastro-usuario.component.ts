@@ -53,5 +53,5 @@ export class CadastroUsuarioComponent implements OnInit {
   cancel():void{
     this.router.navigate(["login"])
   }
-  
+  hide = true
 }
