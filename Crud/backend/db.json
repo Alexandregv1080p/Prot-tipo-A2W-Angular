@@ -61,8 +61,8 @@
     },
     {
       "name": "Alexandre",
-      "senha": "1234",
-      "confirmSenha": "1234",
+      "senha": "1234567",
+      "confirmSenha": "1234567",
       "email": "alexandregv@gmail.com",
       "id": 3
     },
@@ -83,6 +83,13 @@
       "senha": "123456",
       "email": "claudio@hotmail.com",
       "id": 6
+    },
+    {
+      "name": "dsada",
+      "email": "dsadas",
+      "senha": "aaaaa",
+      "confirmSenha": "aaaa",
+      "id": 7
     }
   ],
   "mpc": [

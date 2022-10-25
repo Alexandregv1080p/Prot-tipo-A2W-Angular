@@ -11,18 +11,25 @@
         </mat-form-field>
         <span style="margin-top: 10px;">Alterar senha?</span>
         <div class="senha-content">
-            <mat-form-field appearance="outline"  class="senha" >
-                <input matInput placeholder="Email"[(ngModel)]="senha" name="description">
+            <mat-form-field appearance="outline" class="senha">
+                <input matInput placeholder="Confirme a senha " [type]="hide ?'password' : 'text' " type="password" [(ngModel)]="confirmUserSenha" name="confirmUserSenha">
+                <mat-hint>*Senha atual</mat-hint>
+                <i class="material-icons" matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</i>
             </mat-form-field>
-            <mat-form-field appearance="outline" class="senha" >
-                <input matInput placeholder="Email" [(ngModel)]="senha" name="description">
+            <mat-form-field appearance="outline" class="confirmSenha">
+                <input matInput placeholder="Confirme a senha " type="password" [(ngModel)]="this.usuarios.senha" name="this.usuarios.confirmSenha">
+                <mat-hint>*Nova senha</mat-hint>
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="confirmSenha">
+                <input matInput placeholder="Confirme a senha " type="password" [(ngModel)]="this.usuarios.confirmSenha" name="this.usuarios.confirmSenha">
+                <mat-hint>*Confirmar nova senha</mat-hint>
             </mat-form-field>
         </div>
     </form>
 </mat-card>
-<button mat-raised-button class="salvar" (click)="updateUsuario()">
+<button mat-raised-button class="salvar" (click)="update()">
     Salvar
 </button>
-<button mat-raised-button class="cancelar" >
+<button mat-raised-button class="cancelar" (click)="cancel()" >
     Cancelar
 </button>

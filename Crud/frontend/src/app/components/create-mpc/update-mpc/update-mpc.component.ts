@@ -2,6 +2,9 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Modcliente } from './../mpc.model';
 import { MpcSevService } from './../mpc-sev.service';
 import { Component, OnInit } from '@angular/core';
+import { Cliente } from '../../createCliente/cliente.model';
+import { Modulo } from '../../create-modulo/tabela-cadastro-modulo/tabela-cadastro-modulo-datasource';
+import { ModuloLogService } from '../../create-modulo/modulo-log.service';
 
 @Component({
   selector: 'app-update-mpc',
@@ -10,19 +13,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UpdateMpcComponent implements OnInit {
 
-  mpc : Modcliente
+  modulos!: Modulo[]
 
-  constructor(private mpcService: MpcSevService,private route:ActivatedRoute, private router: Router) { }
+    clientes!: Cliente []
+
+    modcliente: Modcliente
+    
+
+  constructor(private mpcService: MpcSevService,private route:ActivatedRoute, private router: Router,private moduloService:ModuloLogService) { }
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id')
     this.mpcService.readById(id).subscribe(mpc=>{
-      this.mpc = mpc
+      this.modcliente = mpc
+      console.log(this.modcliente)
     })
+    
   }
-  updateCliente(){
-    this.mpcService.update(this.mpc).subscribe(()=>{
-      this.mpcService.showMensage('Cliente atualizado com sucesso')
+  updateMpc(){
+    this.mpcService.update(this.modcliente).subscribe(()=>{
+      this.mpcService.showMensage('MPC atualizado com sucesso')
       this.router.navigate(["modulos-por-cliente"])
     })
   }

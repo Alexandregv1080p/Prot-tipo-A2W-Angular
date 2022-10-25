@@ -24,7 +24,7 @@ export class LogServService {
       duration:3000,
       horizontalPosition:"right",
       verticalPosition:"top"
-  })
+    })
   }
   
 
@@ -33,9 +33,6 @@ export class LogServService {
   }
   getUser(){
     return this.http.get(this.baseUrl)
-  }
-  logarUser(urser:Usuario):Observable<Usuario>{
-    return this.http.post<Usuario>(this.urlUsers,urser)
   }
   logout() {
     this.router.navigate(['login']);

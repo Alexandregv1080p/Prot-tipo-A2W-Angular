@@ -16,10 +16,6 @@ export class LoginComponent implements OnInit {
 
   usuarios : any 
 
-  usuarioLogado : any
-
-  isAutenticado = false
-
   mostrarMenu: boolean = false
 
   constructor(private router: Router,
@@ -48,6 +44,7 @@ export class LoginComponent implements OnInit {
   }
   loginProces(usuarios: any){
       for(let a of this.usuarios){
+        console.log(a)
         if(usuarios.email == a.email && usuarios.senha == a.senha){
           this.authService.showMensage('Usuario logado!')
           localStorage.setItem("Está logado", "true")

@@ -1,9 +1,14 @@
 .salvar{
     margin-right: 10px;
+    
+}
+.salvar:hover{
     background-color: green;
+    color:white
 }
 .cancelar:hover{
     background-color: red;
+    color: white;
 }
 .form{
     display: flex;
@@ -64,5 +69,10 @@ input[type="checkbox"].toggle:checked + label::after{
 }
 .senha-content{
     display: flex;
-    
+}
+.senha{
+    margin: 20px;
+}
+.confirmSenha{
+    margin: 20px;
 }

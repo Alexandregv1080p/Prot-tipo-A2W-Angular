@@ -41,3 +41,7 @@
     bottom: 15px;  
     opacity: 0.5;
 }
+#logo{
+    position: absolute;
+    left: 43%;
+}
