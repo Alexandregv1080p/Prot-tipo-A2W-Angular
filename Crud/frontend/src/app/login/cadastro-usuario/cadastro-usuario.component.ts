@@ -47,15 +47,18 @@ export class CadastroUsuarioComponent implements OnInit {
   get f(){
     return this.cadastroForm.controls
   }
-  mustMatch(senha: any, confirmSenha:any){
+  mustMatch(senhaControl: string, matchingControlName:string){
     return (formGroup : FormGroup )=>{
-      const senhaControl = formGroup.controls[senha]
-      const confirmSenhaControl = formGroup.controls[confirmSenha]
-      if(senhaControl.errors && !confirmSenhaControl.errors['mustMatch']){
+      const contro1 = formGroup.controls[senhaControl]
+      const matchingControl1 = formGroup.controls[matchingControlName]
+      if(matchingControl1.errors && !matchingControl1.errors['mustMatch']){
         return
       }
-      if(senhaControl.value !== confirmSenhaControl.value){
-        confirmSenha.setErrors({mustMatch:true})
+      if(contro1.value !== matchingControl1.value){
+        matchingControl1.setErrors({mustMatch:true})
+      }
+      else{
+        matchingControl1.setErrors(null)
       }
     }
   }

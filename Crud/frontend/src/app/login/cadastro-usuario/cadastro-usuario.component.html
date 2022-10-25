@@ -15,7 +15,8 @@
         <mat-form-field appearance="outline">
             <input type="password" [type]="hide ?'password' : 'text' " matInput placeholder="Confirme a senha" formControlName="confirmSenha" required>
             <i class="material-icons" matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</i>
-            <mat-hint>As senhas precisam estar iguais</mat-hint>
+            <mat-hint *ngIf="f.confirmSenha.errors.required">As senhas precisam estar iguais</mat-hint>
+            <mat-hint *ngIf="f.confirmSenha.errors.mustMatch">As senhas precisam estar iguais</mat-hint>
         </mat-form-field>
         <mat-form-field appearance="outline">
             <input matInput placeholder="Email" required formControlName="email">
