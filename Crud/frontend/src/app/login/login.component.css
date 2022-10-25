@@ -21,10 +21,12 @@
 .mat-card { 
     width: 19%;
     margin-top: 400px;
-    margin: 200px 200px;
+    margin: 250px 1100px;
+    box-shadow: 0px 5px 5px -3px rgb(0 0 0 / 20%), 0px 8px 10px 1px rgb(0 0 0 / 14%), 0px 3px 14px 2px rgb(0 0 0 / 12%);
 }
 .mat-card-title{
     justify-content: center;
+    
 }
 .mat-hint{
     color: red  ;
@@ -39,12 +41,22 @@
     margin-left: -20px;
     margin-top: -20px;
 }
-.contenier{
-    display: flex;
+#espaço-branco{
+    position: fixed;
+    width: 1268px;
+    height: 100%;
+    left: 807px;
+    top: 0px;
+    background: #FFFFFF;
+    clip-path: ellipse(104% 99% at 104% );
 }
 .material-icons{
     position: absolute;
     left: 300px;
     bottom: 15px;  
     opacity: 0.5;
+}
+#logo{
+    position: absolute;
+    left: 60%;
 }

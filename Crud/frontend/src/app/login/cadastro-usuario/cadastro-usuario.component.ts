@@ -39,7 +39,25 @@ export class CadastroUsuarioComponent implements OnInit {
       email:['',Validators.required],
       senha:['',Validators.required],
       confirmSenha:['',Validators.required]
+  },{
+    Validators:this.mustMatch('senha','confirmSenha')
   })
+  }
+
+  get f(){
+    return this.cadastroForm.controls
+  }
+  mustMatch(senha: any, confirmSenha:any){
+    return (formGroup : FormGroup )=>{
+      const senhaControl = formGroup.controls[senha]
+      const confirmSenhaControl = formGroup.controls[confirmSenha]
+      if(senhaControl.errors && !confirmSenhaControl.errors['mustMatch']){
+        return
+      }
+      if(senhaControl.value !== confirmSenhaControl.value){
+        confirmSenha.setErrors({mustMatch:true})
+      }
+    }
   }
 
   cadastrarCliente():void{
