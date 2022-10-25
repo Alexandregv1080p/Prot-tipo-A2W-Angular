@@ -21,7 +21,7 @@
 .mat-card { 
     width: 19%;
     margin-top: 400px;
-    margin: 200px auto;
+    margin: 200px 200px;
 }
 .mat-card-title{
     justify-content: center;
