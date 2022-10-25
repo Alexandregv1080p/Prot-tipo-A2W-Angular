@@ -1,7 +1,7 @@
 {
   "clientes": [
     {
-      "name": "José",
+      "name": "Jos",
       "status": true,
       "description": "Sem descrição disponível",
       "id": 3,
@@ -24,6 +24,12 @@
       "status": false,
       "description": "Teste",
       "id": 8
+    },
+    {
+      "name": "Roberto",
+      "status": true,
+      "description": "Sem descrição",
+      "id": 9
     }
   ],
   "modulos": [
@@ -90,6 +96,13 @@
       "senha": "aaaaa",
       "confirmSenha": "aaaa",
       "id": 7
+    },
+    {
+      "name": "Adriana",
+      "email": "adriana@gmail.com",
+      "senha": "123456",
+      "confirmSenha": "123456",
+      "id": 8
     }
   ],
   "mpc": [
