@@ -40,7 +40,7 @@ export class CadastroUsuarioComponent implements OnInit {
       senha:['',Validators.required],
       confirmSenha:['',Validators.required]
   },{
-    Validators:this.mustMatch('senha','confirmSenha')
+    validators:this.mustMatch('senha','confirmSenha')
   })
   }
 
