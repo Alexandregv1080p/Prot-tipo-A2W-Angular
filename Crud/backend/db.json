@@ -1,28 +1,368 @@
 {
   "clientes": [
     {
+      "name": "Jos",
+      "status": true,
+      "description": "Sem descrição disponível",
+      "id": 3,
+      "modulosPCliente": []
+    },
+    {
+      "name": "Alves",
+      "status": false,
+      "description": "Sem descrição",
+      "id": 4
+    },
+    {
+      "name": "Alvaro",
+      "status": true,
+      "description": "Sem descrição",
+      "id": 7
+    },
+    {
+      "name": "Teste",
+      "status": false,
+      "description": "Teste",
+      "id": 8
+    },
+    {
       "name": "Roberto",
       "status": true,
-      "description": "Cadastrado em tal dia",
+      "description": "Sem descrição",
+      "id": 9
+    },
+    {
+      "name": "Alexandre",
+      "status": true,
+      "description": "Sem descrição",
+      "id": 10
+    },
+    {
+      "name": "Josué",
+      "status": true,
+      "description": "Sem descrição",
+      "id": 11
+    },
+    {
+      "name": "Roberto",
+      "status": true,
+      "description": "Sem descrição",
+      "id": 12
+    },
+    {
+      "name": "Roberto",
+      "status": true,
+      "description": "Sem descrição",
+      "id": 13
+    }
+  ],
+  "modulos": [
+    {
+      "name": "Módulo 2",
+      "status": true,
+      "description": "",
       "id": 1
     },
     {
-      "name": "Cliente Teste2",
+      "name": "Módulo 12",
       "status": true,
-      "description": "Cadastrado",
+      "description": "Criado no dia 20-10-2022",
       "id": 2
     },
     {
-      "name": "Cliente Teste2",
-      "status": true,
-      "description": "Cadastrado",
+      "name": "Módulo 13",
+      "status": false,
+      "description": "Desativado devido problemas",
       "id": 3
     },
     {
-      "name": "Cliente Teste2",
+      "name": "Módulo 16",
       "status": true,
-      "description": "Cadastrado",
+      "description": "Sem descrição",
       "id": 4
+    }
+  ],
+  "usuarios": [
+    {
+      "name": "Alvaro",
+      "senha": "123456",
+      "email": "Alvaro@gmail.com",
+      "id": 1
+    },
+    {
+      "name": "Alexandre",
+      "senha": "1234567",
+      "confirmSenha": "1234567",
+      "email": "alexandregv@gmail.com",
+      "id": 3
+    },
+    {
+      "name": "Ana",
+      "senha": "123",
+      "email": "ana@hotmail.com",
+      "id": 4
+    },
+    {
+      "name": "Roberto",
+      "senha": "123",
+      "email": "robs@gmail.com",
+      "id": 5
+    },
+    {
+      "name": "claudio",
+      "senha": "123456",
+      "email": "claudio@hotmail.com",
+      "id": 6
+    },
+    {
+      "name": "dsada",
+      "email": "dsadas",
+      "senha": "aaaaa",
+      "confirmSenha": "aaaa",
+      "id": 7
+    },
+    {
+      "name": "Adriana",
+      "email": "adriana@gmail.com",
+      "senha": "123456",
+      "confirmSenha": "123456",
+      "id": 8
+    },
+    {
+      "name": "assdasdas",
+      "email": "dasdasd",
+      "senha": "1234",
+      "confirmSenha": "1234",
+      "id": 9
+    },
+    {
+      "name": "Alexandre",
+      "email": "alexandre2@gmail.com",
+      "senha": "1234",
+      "confirmSenha": "1234",
+      "id": 10
+    },
+    {
+      "name": "alexandre",
+      "email": "alex@123.com",
+      "senha": "12345",
+      "confirmSenha": "12345",
+      "id": 11
+    },
+    {
+      "name": "Alexandre",
+      "email": "alexandre123.com",
+      "senha": "12345",
+      "confirmSenha": "12345",
+      "id": 12
+    },
+    {
+      "name": "Alexandre",
+      "email": "alexandre12345.com",
+      "senha": "12345",
+      "confirmSenha": "12345",
+      "id": 13
+    },
+    {
+      "name": "Alexandre",
+      "email": "ale123.com",
+      "senha": "12345",
+      "confirmSenha": "12345",
+      "id": 14
+    },
+    {
+      "name": "Alexandre",
+      "email": "ale123.com",
+      "senha": "12345",
+      "confirmSenha": "12345",
+      "id": 15
+    },
+    {
+      "name": "Alexandre",
+      "email": "alex123.com",
+      "senha": "1234",
+      "confirmSenha": "1234",
+      "id": 16
+    },
+    {
+      "name": "Alexandre",
+      "email": "alex123.com",
+      "senha": "1234",
+      "confirmSenha": "1234",
+      "id": 17
+    }
+  ],
+  "mpc": [
+    {
+      "clientes": {
+        "name": "dasd",
+        "status": false,
+        "description": "dsa",
+        "id": 6
+      },
+      "modulos": {
+        "name": "Módulo 2",
+        "status": true,
+        "description": "",
+        "id": 1
+      },
+      "quantidadeCliente": "5",
+      "quantidadeModulo": "10",
+      "data": "2022-10-30",
+      "id": 8,
+      "status": true
+    },
+    {
+      "clientes": {
+        "name": "Alvaro",
+        "status": true,
+        "description": "Sem descrição",
+        "id": 7
+      },
+      "modulos": {
+        "name": "Módulo 12",
+        "status": true,
+        "description": "Criado no dia 20-10-2022",
+        "id": 2
+      },
+      "quantidadeCliente": "12",
+      "quantidadeModulo": "16",
+      "data": "",
+      "id": 9
+    },
+    {
+      "clientes": {
+        "name": "José",
+        "status": true,
+        "description": "Sem descrição disponível",
+        "id": 3,
+        "modulosPCliente": []
+      },
+      "modulos": {
+        "name": "Módulo 12",
+        "status": true,
+        "description": "Criado no dia 20-10-2022",
+        "id": 2
+      },
+      "quantidadeCliente": "5",
+      "quantidadeModulo": "10",
+      "data": "2022-10-31",
+      "id": 10
+    },
+    {
+      "clientes": {
+        "name": "Alvaro",
+        "status": true,
+        "description": "Sem descrição",
+        "id": 7
+      },
+      "modulos": {
+        "name": "Módulo 12",
+        "status": true,
+        "description": "Criado no dia 20-10-2022",
+        "id": 2
+      },
+      "quantidadeCliente": "12",
+      "quantidadeModulo": "12",
+      "data": "",
+      "status": true,
+      "id": 11
+    },
+    {
+      "clientes": {
+        "name": "José",
+        "status": true,
+        "description": "Sem descrição disponível",
+        "id": 3,
+        "modulosPCliente": []
+      },
+      "modulos": {
+        "name": "Módulo 2",
+        "status": true,
+        "description": "",
+        "id": 1
+      },
+      "quantidadeCliente": "10",
+      "quantidadeModulo": "5",
+      "data": "",
+      "status": true,
+      "id": 12
+    },
+    {
+      "clientes": {
+        "name": "Roberto",
+        "status": true,
+        "description": "Sem descrição",
+        "id": 9
+      },
+      "modulos": {
+        "name": "Módulo 12",
+        "status": true,
+        "description": "Criado no dia 20-10-2022",
+        "id": 2
+      },
+      "quantidadeCliente": "15",
+      "quantidadeModulo": "52",
+      "data": "1999-10-30",
+      "status": true,
+      "id": 13
+    },
+    {
+      "clientes": {
+        "name": "Roberto",
+        "status": true,
+        "description": "Sem descrição",
+        "id": 9
+      },
+      "modulos": {
+        "name": "Módulo 16",
+        "status": true,
+        "description": "Sem descrição",
+        "id": 4
+      },
+      "quantidadeCliente": "12",
+      "quantidadeModulo": "15",
+      "data": "1000-10-30",
+      "status": true,
+      "id": 14
+    },
+    {
+      "clientes": {
+        "name": "Alvaro",
+        "status": true,
+        "description": "Sem descrição",
+        "id": 7
+      },
+      "modulos": {
+        "name": "Módulo 12",
+        "status": true,
+        "description": "Criado no dia 20-10-2022",
+        "id": 2
+      },
+      "quantidadeCliente": "12",
+      "quantidadeModulo": "15",
+      "data": "2999-10-30",
+      "status": true,
+      "id": 15
+    },
+    {
+      "clientes": {
+        "name": "Alvaro",
+        "status": true,
+        "description": "Sem descrição",
+        "id": 7
+      },
+      "modulos": {
+        "name": "Módulo 12",
+        "status": true,
+        "description": "Criado no dia 20-10-2022",
+        "id": 2
+      },
+      "quantidadeCliente": "12",
+      "quantidadeModulo": "12",
+      "data": "2002-10-30",
+      "status": true,
+      "id": 16
     }
   ]
 }

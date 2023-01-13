@@ -1,0 +1,33 @@
+<img src="assets/imgs/a2w-login 1.png" class="background">
+<img src="assets/imgs/logo-official-platform 1 1.png" id="logo" alt="">
+<mat-card>
+    <mat-card-title style="display:flex; text-align: center;">Ensira os dados logo abaixo</mat-card-title>
+    <form class="form" [formGroup]="cadastroForm" (ngSubmit)="cadastrarCliente()">
+        <mat-form-field appearance="outline">
+            <input matInput placeholder="Nome" required formControlName="name" minlength="2">
+            <mat-hint *ngIf="cadastroForm.get('name').errors?.['required']">*Entre com seu nome completo</mat-hint>
+            <i class="material-icons name" matSuffix>perm_identity</i>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <input matInput type="password" [type]="hide ?'password' : 'text' " placeholder="Senha" required formControlName="senha" minlength="4" required>
+            <mat-hint *ngIf="cadastroForm.get('senha').errors?.['required']">*Crie uma senha como 4 digitos no mínimo</mat-hint>
+            <i class="material-icons" matSuffix (click)="hide = !hide" style="cursor: pointer;">{{hide ? 'visibility' : 'visibility_off'}}</i>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <input type="password" [type]="hide ?'password' : 'text' " matInput placeholder="Confirme a senha" formControlName="confirmSenha" required>
+            <i class="material-icons" matSuffix (click)="hide = !hide" style="cursor: pointer;">{{hide ? 'visibility' : 'visibility_off'}}</i>
+            <mat-hint *ngIf="cadastroForm.get('confirmSenha').errors?.mustMatch" class="red">*As senhas precisam ser iguais</mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <input matInput placeholder="Email" required formControlName="email">
+            <mat-hint *ngIf="cadastroForm.get('email').errors?.['required']">*Entre com um email para contato</mat-hint>
+            <i class="material-icons" matSuffix>mail_outline</i>
+        </mat-form-field>
+        <button mat-raised-button class="cadastro"  [disabled]="!cadastroForm.valid">
+            Cadastrar
+        </button>
+        <button mat-raised-button class="cadastro" (click)="cancel()">
+            Login
+        </button>
+    </form> 
+</mat-card>

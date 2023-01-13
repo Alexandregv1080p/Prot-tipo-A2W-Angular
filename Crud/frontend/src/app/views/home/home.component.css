@@ -1,0 +1,33 @@
+table{
+    width: 100%;
+}
+th.mat-header-cell:first-of-type, td.mat-cell:first-of-type, td.mat-footer-cell:first-of-type {
+    padding-left: 45px;
+}
+.mat-elevation-z8 {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+th.mat-header-cell {
+    text-align: center;
+}
+.mat-header-cell {
+    font-size: 1.6em;
+}
+th{
+    background-color: #4d99ad;
+    color: white;
+}
+.mat-table{    
+    border-radius: 8px;
+    overflow:hidden ;
+}
+.editar{
+    color: #5fcf7f;
+}
+
+.deletar{
+    color:crimson
+}

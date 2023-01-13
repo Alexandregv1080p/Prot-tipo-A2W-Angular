@@ -1,13 +1,13 @@
-<mat-toolbar class="header mat-elevation-z4">
+<mat-toolbar class="header mat-elevation-z4" *ngIf="head.visible" >
     <span>
         <a>
             <img src="assets/imgs/logo.png" id="logo">
         </a>
     </span>
     <span class="title-group">
-        Seja bem vindo, Fulano!
         <i class="material-icons">
-            sentiment_very_satisfied
+            face
         </i>
+           Seja bem vindo, {{nome}}!!
     </span>
 </mat-toolbar>
