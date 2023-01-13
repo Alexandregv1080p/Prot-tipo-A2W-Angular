@@ -48,5 +48,4 @@ export class MpcSevService {
     let url = `${this.baseUrl}/${mpc.id}`
     return this.http.put<Modcliente>(url,mpc)
   }
-  
 }
